@@ -7,6 +7,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 <link rel="stylesheet" href="styles.css">
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 </head>
 <body>
 
@@ -206,6 +207,12 @@
 </footer>
 
 <script>
+// ========== CONEXIÓN A SUPABASE ==========
+const SUPABASE_URL = 'https://qsdrtvgsyjzzsqaqwlpz.supabase.co';
+const SUPABASE_ANON_KEY = 'sb_publishable_SKwEPb7pvaMTma0d8_AUDw_rGvIdj-s';
+const { createClient } = supabase;
+const db = createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
+
 function escapeXSS(str){ if(!str) return ''; return str.replace(/[&<>]/g, m => m === '&' ? '&amp;' : m === '<' ? '&lt;' : '&gt;'); }
 
 class NotificationSystem {
@@ -227,11 +234,12 @@ class NotificationSystem {
 }
 const notifier = new NotificationSystem();
 
-function enviarFormulario(e){
+async function enviarFormulario(e){
   e.preventDefault();
   const nombrePadre = document.getElementById('nombrePadre').value.trim();
   const nombreHijo = document.getElementById('nombreHijo').value.trim();
   const edadHijo = document.getElementById('edadHijo').value;
+  const programaInteres = document.getElementById('programaInteres').value;
   const emailPadre = document.getElementById('emailPadre').value.trim();
   const telPadre = document.getElementById('telPadre').value.trim();
 
@@ -240,11 +248,33 @@ function enviarFormulario(e){
     return;
   }
 
-  // Aquí se conectaría a Supabase u otro backend para guardar la solicitud:
-  // await db.from('solicitudes_evaluacion').insert({ nombre_padre, nombre_hijo, edad_hijo, email_padre, tel_padre, programa_interes });
+  const submitBtn = document.querySelector('#formAgenda .submit-btn');
+  const textoOriginal = submitBtn.innerHTML;
+  submitBtn.disabled = true;
+  submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Enviando...';
 
-  notifier.showToast(`¡Gracias ${nombrePadre}! Te contactaremos pronto para agendar la evaluación de ${nombreHijo}.`, 'success');
-  document.getElementById('formAgenda').reset();
+  try {
+    const { error } = await db.from('solicitudes_evaluacion').insert({
+      nombre_padre: nombrePadre,
+      nombre_hijo: nombreHijo,
+      edad_hijo: parseInt(edadHijo, 10),
+      programa_interes: programaInteres,
+      email_padre: emailPadre,
+      tel_padre: telPadre
+    });
+
+    if (error) throw error;
+
+    notifier.showToast(`¡Gracias ${nombrePadre}! Te contactaremos pronto para agendar la evaluación de ${nombreHijo}.`, 'success');
+    document.getElementById('formAgenda').reset();
+
+  } catch (error) {
+    console.error(error);
+    notifier.showToast('No se pudo enviar tu solicitud. Intenta de nuevo en un momento.', 'error');
+  } finally {
+    submitBtn.disabled = false;
+    submitBtn.innerHTML = textoOriginal;
+  }
 }
 </script>
 

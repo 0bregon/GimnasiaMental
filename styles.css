@@ -137,6 +137,13 @@ header{
 .card.c1 .card-icon{background:var(--verde);}
 .card.c2 .card-icon{background:var(--azul);}
 .card.c3 .card-icon{background:var(--amarillo);color:var(--tinta);}
+.card-img{
+  width:100%;height:140px;object-fit:cover;border-radius:14px;margin-bottom:22px;
+  background:rgba(27,77,62,0.06);
+}
+.card.c1 .card-img{border-bottom:3px solid var(--verde);}
+.card.c2 .card-img{border-bottom:3px solid var(--azul);}
+.card.c3 .card-img{border-bottom:3px solid var(--amarillo);}
 .card h3{font-size:1.28rem;color:var(--verde);margin-bottom:10px;font-weight:700;}
 .card p.desc{color:rgba(22,36,31,0.68);font-size:0.96rem;margin-bottom:20px;}
 .card .skills{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:22px;}
@@ -146,6 +153,14 @@ header{
 }
 .card .meta{display:flex;justify-content:space-between;font-size:0.82rem;color:rgba(22,36,31,0.55);padding-top:16px;border-top:1px solid var(--linea);}
 .card .meta b{color:var(--tinta);}
+.card-btn{
+  width:100%;margin-top:20px;background:transparent;color:var(--azul);
+  border:1.5px solid rgba(30,58,95,0.3);border-radius:999px;padding:11px 16px;
+  font-weight:600;font-size:0.9rem;cursor:pointer;font-family:'Inter',sans-serif;
+  display:flex;align-items:center;justify-content:center;gap:8px;
+  transition:background .2s, color .2s, border-color .2s;
+}
+.card-btn:hover{background:var(--azul);color:#fff;border-color:var(--azul);}
 
 /* ===== POR QUÉ / BENEFICIOS ===== */
 .beneficios{padding:90px 0;background:var(--verde);color:#fff;position:relative;overflow:hidden;}
@@ -210,12 +225,13 @@ header{
 .field{display:flex;flex-direction:column;gap:6px;}
 .field.full{grid-column:1/-1;}
 .field label{font-size:0.82rem;font-weight:600;color:var(--tinta);}
-.field input,.field select{
+.field input,.field select,.field textarea{
   border:1.5px solid var(--linea);border-radius:10px;padding:11px 13px;font-size:0.93rem;
   font-family:'Inter',sans-serif;background:var(--crema);color:var(--tinta);
   transition:border-color .2s;
 }
-.field input:focus,.field select:focus{outline:none;border-color:var(--azul);background:#fff;}
+.field input:focus,.field select:focus,.field textarea:focus{outline:none;border-color:var(--azul);background:#fff;}
+.field textarea{resize:vertical;font-family:'Inter',sans-serif;}
 .submit-btn{
   width:100%;background:var(--azul);color:#fff;border:none;border-radius:10px;
   padding:15px;font-size:0.98rem;font-weight:700;cursor:pointer;margin-top:8px;

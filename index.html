@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Gimnasio Mental | Entrenamiento de Pensamiento Analítico para Niños</title>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header>
+  <div class="nav">
+    <div class="brand"><span class="dot"></span>Gimnasio Mental</div>
+    <nav class="nav-links">
+      <a href="#programas">Programas</a>
+      <a href="#beneficios">Beneficios</a>
+      <a href="#testimonios">Testimonios</a>
+      <a href="#agendar">Contacto</a>
+    </nav>
+    <button class="nav-cta" onclick="document.getElementById('agendar').scrollIntoView({behavior:'smooth'})">Evaluación gratuita</button>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="wrap hero-grid">
+    <div>
+      <div class="eyebrow"><i class="fas fa-brain"></i> Centro de entrenamiento cognitivo</div>
+      <h1>El gimnasio donde tu hijo<br>entrena <span class="accent">la mente</span>,<br>no los músculos.</h1>
+      <p class="lead">Igual que el cuerpo, el pensamiento analítico se entrena con repetición, técnica y guía experta. Series de lógica, lectura y algoritmos diseñadas para que cada sesión deje músculo mental.</p>
+      <div class="hero-ctas">
+        <button class="btn-primary" onclick="document.getElementById('agendar').scrollIntoView({behavior:'smooth'})">
+          <i class="fas fa-calendar-check"></i> Agendar evaluación gratuita
+        </button>
+        <button class="btn-secondary" onclick="document.getElementById('programas').scrollIntoView({behavior:'smooth'})">Ver programas</button>
+      </div>
+      <div class="hero-stats">
+        <div class="stat"><b>+1,200</b><span>niños entrenados</span></div>
+        <div class="stat"><b>92%</b><span>mejora medible en 8 semanas</span></div>
+        <div class="stat"><b>3</b><span>programas especializados</span></div>
+      </div>
+    </div>
+    <div class="hero-visual">
+      <div class="rep-bar">
+        <div class="rep-bar-head"><span>Progreso semanal</span><b>Serie 4 de 6</b></div>
+        <div class="set"><div class="label">Lógica matemática</div><div class="track"><div class="fill"></div></div><div class="pct">88%</div></div>
+        <div class="set"><div class="label">Comprensión lectora</div><div class="track"><div class="fill"></div></div><div class="pct">64%</div></div>
+        <div class="set"><div class="label">Algoritmos básicos</div><div class="track"><div class="fill"></div></div><div class="pct">97%</div></div>
+        <div class="rep-bar-foot"><i class="fas fa-bolt"></i> 3 repeticiones más para subir de nivel</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="programas" id="programas">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow"><i class="fas fa-dumbbell"></i> Nuestros programas</div>
+      <h2>Tres rutinas de entrenamiento mental</h2>
+      <p>Cada programa funciona como una rutina de gimnasio: series progresivas, retos medibles y un instructor que ajusta la intensidad al ritmo de cada niño.</p>
+    </div>
+    <div class="cards-grid">
+
+      <div class="card c1">
+        <div class="card-icon"><i class="fas fa-square-root-variable"></i></div>
+        <h3>Lógica Matemática</h3>
+        <p class="desc">Ejercicios de razonamiento numérico y patrones que convierten "no entiendo matemáticas" en "encontré la forma de resolverlo".</p>
+        <div class="skills"><span>Patrones</span><span>Problemas</span><span>Razonamiento</span></div>
+        <div class="meta"><span>Edad <b>7–12 años</b></span><span><b>2</b> sesiones/sem</span></div>
+      </div>
+
+      <div class="card c2">
+        <div class="card-icon"><i class="fas fa-book-open"></i></div>
+        <h3>Comprensión Lectora</h3>
+        <p class="desc">Entrena la capacidad de leer entre líneas, inferir y argumentar, la base de todo pensamiento crítico futuro.</p>
+        <div class="skills"><span>Inferencia</span><span>Análisis</span><span>Vocabulario</span></div>
+        <div class="meta"><span>Edad <b>6–12 años</b></span><span><b>2</b> sesiones/sem</span></div>
+      </div>
+
+      <div class="card c3">
+        <div class="card-icon"><i class="fas fa-diagram-project"></i></div>
+        <h3>Algoritmos Básicos</h3>
+        <p class="desc">Pensamiento computacional sin pantallas complicadas: secuencias, condiciones y lógica paso a paso para resolver cualquier problema.</p>
+        <div class="skills"><span>Secuencias</span><span>Lógica</span><span>Resolución</span></div>
+        <div class="meta"><span>Edad <b>8–13 años</b></span><span><b>1</b> sesión/sem</span></div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section class="beneficios" id="beneficios">
+  <div class="wrap ben-grid">
+    <div>
+      <h2>¿Por qué entrenar el pensamiento como se entrena el cuerpo?</h2>
+      <p>El cerebro de un niño tiene la misma capacidad de mejora que cualquier músculo: con la rutina correcta y constancia, los resultados son medibles en semanas, no en años.</p>
+    </div>
+    <div class="ben-list">
+      <div class="ben-item">
+        <div class="num">1</div>
+        <div><h4>Mejor desempeño escolar</h4><p>El razonamiento lógico se transfiere directamente a matemáticas, ciencias y comprensión de lectura en la escuela.</p></div>
+      </div>
+      <div class="ben-item">
+        <div class="num">2</div>
+        <div><h4>Confianza para resolver problemas</h4><p>Niños que practican lógica con regularidad enfrentan retos nuevos sin bloquearse ante lo desconocido.</p></div>
+      </div>
+      <div class="ben-item">
+        <div class="num">3</div>
+        <div><h4>Resultados que se pueden medir</h4><p>Cada sesión se evalúa con métricas claras, así ves el progreso real de tu hijo, no solo una sensación.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="testimonios" id="testimonios">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow"><i class="fas fa-star"></i> Lo que dicen los padres</div>
+      <h2>Resultados que se notan en casa</h2>
+    </div>
+    <div class="test-grid">
+      <div class="test-card">
+        <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+        <p>Mi hijo pasó de evitar las matemáticas a pedirme que le ponga retos extra los fines de semana.</p>
+        <div class="test-who"><div class="test-avatar">M</div><div><b>Marisol Quintero</b><span>Mamá de Andrés, 9 años</span></div></div>
+      </div>
+      <div class="test-card">
+        <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+        <p>La evaluación diagnóstica nos mostró exactamente dónde estaba atorada y el programa se ajustó a eso.</p>
+        <div class="test-who"><div class="test-avatar">R</div><div><b>Roberto Sánchez</b><span>Papá de Valentina, 11 años</span></div></div>
+      </div>
+      <div class="test-card">
+        <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+        <p>Cambió la forma en que mi hijo lee instrucciones de cualquier cosa, no solo de la tarea.</p>
+        <div class="test-who"><div class="test-avatar">L</div><div><b>Lucía Fernández</b><span>Mamá de Diego, 8 años</span></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="agendar" id="agendar">
+  <div class="wrap">
+    <div class="agendar-box">
+      <div class="agendar-info">
+        <h2>Agenda la evaluación diagnóstica gratuita</h2>
+        <p>Una sesión sin costo donde identificamos el nivel de pensamiento analítico de tu hijo y te recomendamos el programa ideal.</p>
+        <div class="agendar-points">
+          <div><i class="fas fa-check"></i> Sin costo ni compromiso</div>
+          <div><i class="fas fa-check"></i> Reporte de resultados para los padres</div>
+          <div><i class="fas fa-check"></i> Recomendación de programa personalizada</div>
+          <div><i class="fas fa-check"></i> Duración aproximada: 30 minutos</div>
+        </div>
+      </div>
+      <div class="agendar-form">
+        <h3>Reserva tu cupo</h3>
+        <p class="sub">Te contactaremos en menos de 24 horas para confirmar el horario.</p>
+        <form id="formAgenda" onsubmit="enviarFormulario(event)">
+          <div class="form-row">
+            <div class="field"><label for="nombrePadre">Nombre del padre/madre</label><input type="text" id="nombrePadre" required></div>
+            <div class="field"><label for="nombreHijo">Nombre del niño/a</label><input type="text" id="nombreHijo" required></div>
+          </div>
+          <div class="form-row">
+            <div class="field"><label for="edadHijo">Edad del niño/a</label><input type="number" id="edadHijo" min="5" max="14" required></div>
+            <div class="field"><label for="programaInteres">Programa de interés</label>
+              <select id="programaInteres">
+                <option value="logica">Lógica Matemática</option>
+                <option value="lectura">Comprensión Lectora</option>
+                <option value="algoritmos">Algoritmos Básicos</option>
+                <option value="no-seguro">No estoy seguro/a</option>
+              </select>
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="field full"><label for="emailPadre">Correo electrónico</label><input type="email" id="emailPadre" required></div>
+          </div>
+          <div class="form-row">
+            <div class="field full"><label for="telPadre">Teléfono / WhatsApp</label><input type="tel" id="telPadre" required></div>
+          </div>
+          <button type="submit" class="submit-btn"><i class="fas fa-paper-plane"></i> Solicitar evaluación gratuita</button>
+          <p class="form-note">Al enviar este formulario, aceptas que te contactemos para coordinar la sesión.</p>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div class="foot-brand"><span class="dot"></span>Gimnasio Mental</div>
+      <div class="foot-links">
+        <a href="#programas">Programas</a>
+        <a href="#beneficios">Beneficios</a>
+        <a href="#testimonios">Testimonios</a>
+        <a href="#agendar">Agendar evaluación</a>
+      </div>
+      <div class="foot-social">
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-whatsapp"></i></a>
+        <a href="#"><i class="fab fa-facebook-f"></i></a>
+      </div>
+    </div>
+    <div class="foot-bottom">© 2026 Gimnasio Mental — Entrenamiento de pensamiento analítico para niños.</div>
+  </div>
+</footer>
+
+<script>
+function escapeXSS(str){ if(!str) return ''; return str.replace(/[&<>]/g, m => m === '&' ? '&amp;' : m === '<' ? '&lt;' : '&gt;'); }
+
+class NotificationSystem {
+  constructor(){ this.createContainer(); }
+  createContainer(){ if(!document.querySelector('.notification-container')){ const c=document.createElement('div'); c.className='notification-container'; document.body.appendChild(c); } }
+  showToast(message, type='info', duration=3500){
+    const container = document.querySelector('.notification-container');
+    const toast = document.createElement('div');
+    const icons = { success:'fa-check-circle', error:'fa-exclamation-circle', warning:'fa-exclamation-triangle', info:'fa-info-circle' };
+    const titles = { success:'Listo', error:'Error', warning:'Atención', info:'Información' };
+    toast.className = `notification notification-${type}`;
+    toast.innerHTML = `<div class="notification-icon"><i class="fas ${icons[type]}"></i></div>
+      <div class="notification-content"><div class="notification-title">${titles[type]}</div><div class="notification-message">${escapeXSS(message)}</div></div>
+      <button class="notification-close"><i class="fas fa-times"></i></button>`;
+    container.appendChild(toast);
+    setTimeout(()=> toast.remove(), duration);
+    toast.querySelector('.notification-close').onclick = () => toast.remove();
+  }
+}
+const notifier = new NotificationSystem();
+
+function enviarFormulario(e){
+  e.preventDefault();
+  const nombrePadre = document.getElementById('nombrePadre').value.trim();
+  const nombreHijo = document.getElementById('nombreHijo').value.trim();
+  const edadHijo = document.getElementById('edadHijo').value;
+  const emailPadre = document.getElementById('emailPadre').value.trim();
+  const telPadre = document.getElementById('telPadre').value.trim();
+
+  if(!nombrePadre || !nombreHijo || !edadHijo || !emailPadre || !telPadre){
+    notifier.showToast('Completa todos los campos para continuar', 'warning');
+    return;
+  }
+
+  // Aquí se conectaría a Supabase u otro backend para guardar la solicitud:
+  // await db.from('solicitudes_evaluacion').insert({ nombre_padre, nombre_hijo, edad_hijo, email_padre, tel_padre, programa_interes });
+
+  notifier.showToast(`¡Gracias ${nombrePadre}! Te contactaremos pronto para agendar la evaluación de ${nombreHijo}.`, 'success');
+  document.getElementById('formAgenda').reset();
+}
+</script>
+
+</body>
+</html>

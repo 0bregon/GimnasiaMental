@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gimnasio Mental</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Encabezado -->
+    <header>
+        <h1>Gimnasio Mental</h1>
+        <h2>Centro de Reforzamiento Académico y Razonamiento Lógico para Niños</h2>
+
+        <p>
+            Ayudamos a los niños a desarrollar el pensamiento analítico,
+            la creatividad y la capacidad para resolver problemas mediante
+            programas especializados.
+        </p>
+    </header>
+
+    <hr>
+
+    <!-- Programas -->
+    <section>
+        <h2>Nuestros Programas de Entrenamiento</h2>
+
+        <!-- Card 1 -->
+        <div>
+            <img src="imagenes/logica.jpg"
+                 alt="Lógica Matemática"
+                 width="250">
+
+            <h3>Lógica Matemática</h3>
+
+            <p>
+                Desarrolla el razonamiento y la resolución de problemas
+                mediante ejercicios adaptados a cada edad.
+            </p>
+        </div>
+
+        <br>
+
+        <!-- Card 2 -->
+        <div>
+            <img src="imagenes/lectura.jpg"
+                 alt="Comprensión Lectora"
+                 width="250">
+
+            <h3>Comprensión Lectora</h3>
+
+            <p>
+                Mejora la interpretación y comprensión de textos,
+                fortaleciendo el pensamiento crítico.
+            </p>
+        </div>
+
+        <br>
+
+        <!-- Card 3 -->
+        <div>
+            <img src="imagenes/algoritmos.jpg"
+                 alt="Algoritmos Básicos"
+                 width="250">
+
+            <h3>Algoritmos Básicos</h3>
+
+            <p>
+                Introduce a los niños al pensamiento computacional y
+                a la lógica de programación.
+            </p>
+        </div>
+    </section>
+
+    <hr>
+
+    <!-- Formulario -->
+    <section>
+
+        <h2>Agende una Evaluación Diagnóstica Gratuita</h2>
+
+        <form>
+
+            <label for="padre">Nombre del padre o acudiente:</label>
+            <br>
+            <input type="text" id="padre" required>
+            <br><br>
+
+            <label for="telefono">Teléfono:</label>
+            <br>
+            <input type="tel" id="telefono" required>
+            <br><br>
+
+            <label for="correo">Correo electrónico:</label>
+            <br>
+            <input type="email" id="correo" required>
+            <br><br>
+
+            <label for="hijo">Nombre del estudiante:</label>
+            <br>
+            <input type="text" id="hijo" required>
+            <br><br>
+
+            <label for="edad">Edad:</label>
+            <br>
+            <input type="number" id="edad" min="5" max="18" required>
+            <br><br>
+
+            <label for="programa">
+                Programa de interés:
+            </label>
+            <br>
+
+            <select id="programa" required>
+                <option value="">Seleccione una opción</option>
+                <option value="logica">Lógica Matemática</option>
+                <option value="lectura">Comprensión Lectora</option>
+                <option value="algoritmos">Algoritmos Básicos</option>
+            </select>
+
+            <br><br>
+
+            <label for="comentarios">
+                Comentarios adicionales:
+            </label>
+            <br>
+
+            <textarea id="comentarios"
+                      rows="4"
+                      cols="40"></textarea>
+
+            <br><br>
+
+            <button type="submit">
+                Agendar Evaluación Gratuita
+            </button>
+
+        </form>
+
+    </section>
+
+</body>
+</html>

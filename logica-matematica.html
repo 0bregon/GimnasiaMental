@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lógica Matemática | Gimnasio Mental</title>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header>
+  <div class="nav">
+    <div class="brand" onclick="location.href='index.html'" style="cursor:pointer"><span class="dot"></span>Gimnasio Mental</div>
+    <nav class="nav-links">
+      <a href="index.html#programas">Programas</a>
+      <a href="#modulos">Temario</a>
+      <a href="#metodologia">Metodología</a>
+      <a href="#habilidades">Habilidades</a>
+      <a href="#agendar">Contacto</a>
+    </nav>
+    <button class="nav-cta" onclick="document.getElementById('agendar').scrollIntoView({behavior:'smooth'})">Evaluación gratuita</button>
+  </div>
+</header>
+
+<section class="hero hero-program">
+  <div class="wrap hero-grid">
+    <div>
+      <a href="index.html#programas" class="back-link"><i class="fas fa-arrow-left"></i> Volver a programas</a>
+      <div class="eyebrow"><i class="fas fa-square-root-variable"></i> Programa especializado · 7–12 años</div>
+      <h1>Lógica Matemática:<br>la rutina que entrena<br><span class="accent">tu razonamiento</span>.</h1>
+      <p class="lead">Seis módulos progresivos donde tu hijo pasará de observar patrones a construir argumentos sólidos, usando problemas, acertijos y diagramas como pesas de su entrenamiento mental.</p>
+      <div class="hero-ctas">
+        <button class="btn-primary" onclick="document.getElementById('agendar').scrollIntoView({behavior:'smooth'})">
+          <i class="fas fa-calendar-check"></i> Agendar evaluación gratuita
+        </button>
+        <button class="btn-secondary" onclick="document.getElementById('modulos').scrollIntoView({behavior:'smooth'})">Ver temario</button>
+      </div>
+      <div class="hero-stats">
+        <div class="stat"><b>6</b><span>módulos progresivos</span></div>
+        <div class="stat"><b>2</b><span>sesiones por semana</span></div>
+        <div class="stat"><b>+1,200</b><span>niños entrenados</span></div>
+      </div>
+    </div>
+    <div class="hero-visual">
+      <div class="rep-bar">
+        <div class="rep-bar-head"><span>Rutina actual</span><b>Módulo 3 de 6</b></div>
+        <div class="set"><div class="label">Patrones numéricos</div><div class="track"><div class="fill" style="width:100%"></div></div><div class="pct">100%</div></div>
+        <div class="set"><div class="label">Patrones visuales</div><div class="track"><div class="fill" style="width:100%"></div></div><div class="pct">100%</div></div>
+        <div class="set"><div class="label">Razonamiento deductivo</div><div class="track"><div class="fill" style="width:45%"></div></div><div class="pct">45%</div></div>
+        <div class="rep-bar-foot"><i class="fas fa-bolt"></i> 2 series más para subir al Módulo 4</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="programas modulos" id="modulos">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow"><i class="fas fa-list-ol"></i> Temario completo</div>
+      <h2>Seis módulos, una rutina progresiva</h2>
+      <p>Cada módulo se construye sobre el anterior: de la observación al pensamiento crítico. Como en el gimnasio, la intensidad sube conforme tu hijo gana resistencia mental.</p>
+    </div>
+
+    <div class="modulos-grid">
+
+      <div class="modulo-card">
+        <div class="modulo-head">
+          <span class="modulo-num">Módulo 1</span>
+          <span class="modulo-badge intro">Base</span>
+        </div>
+        <div class="modulo-icon"><i class="fas fa-lightbulb"></i></div>
+        <h3>Introducción al Pensamiento Lógico</h3>
+        <p>El calentamiento: entender qué es la lógica, cómo observar con intención y por qué matemáticas y lógica entrenan el mismo músculo.</p>
+        <ul class="modulo-list">
+          <li><i class="fas fa-check"></i> ¿Qué es la lógica?</li>
+          <li><i class="fas fa-check"></i> Observación y análisis de situaciones</li>
+          <li><i class="fas fa-check"></i> Relación entre lógica y matemáticas</li>
+        </ul>
+      </div>
+
+      <div class="modulo-card">
+        <div class="modulo-head">
+          <span class="modulo-num">Módulo 2</span>
+          <span class="modulo-badge core">Central</span>
+        </div>
+        <div class="modulo-icon"><i class="fas fa-shapes"></i></div>
+        <h3>Patrones y Secuencias</h3>
+        <p>La primera serie de peso: detectar regularidades en números, formas y situaciones, y aprender a predecir lo que viene después.</p>
+        <ul class="modulo-list">
+          <li><i class="fas fa-check"></i> Identificación de patrones numéricos</li>
+          <li><i class="fas fa-check"></i> Patrones visuales y geométricos</li>
+          <li><i class="fas fa-check"></i> Predicción de secuencias</li>
+        </ul>
+      </div>
+
+      <div class="modulo-card">
+        <div class="modulo-head">
+          <span class="modulo-num">Módulo 3</span>
+          <span class="modulo-badge core">Central</span>
+        </div>
+        <div class="modulo-icon"><i class="fas fa-magnifying-glass"></i></div>
+        <h3>Razonamiento Deductivo</h3>
+        <p>Aquí se construye fuerza mental: partir de premisas verdaderas para llegar a conclusiones válidas, usando acertijos como mancuernas.</p>
+        <ul class="modulo-list">
+          <li><i class="fas fa-check"></i> Inferencias lógicas</li>
+          <li><i class="fas fa-check"></i> Resolución de acertijos</li>
+          <li><i class="fas fa-check"></i> Análisis de premisas y conclusiones</li>
+        </ul>
+      </div>
+
+      <div class="modulo-card">
+        <div class="modulo-head">
+          <span class="modulo-num">Módulo 4</span>
+          <span class="modulo-badge core">Central</span>
+        </div>
+        <div class="modulo-icon"><i class="fas fa-arrows-to-dot"></i></div>
+        <h3>Razonamiento Inductivo</h3>
+        <p>El complemento perfecto: pasar de casos concretos a reglas generales, descubriendo relaciones que no estaban a simple vista.</p>
+        <ul class="modulo-list">
+          <li><i class="fas fa-check"></i> Generalización de reglas</li>
+          <li><i class="fas fa-check"></i> Descubrimiento de relaciones</li>
+          <li><i class="fas fa-check"></i> Resolución de problemas basados en observaciones</li>
+        </ul>
+      </div>
+
+      <div class="modulo-card">
+        <div class="modulo-head">
+          <span class="modulo-num">Módulo 5</span>
+          <span class="modulo-badge advanced">Avanzado</span>
+        </div>
+        <div class="modulo-icon"><i class="fas fa-table-cells-large"></i></div>
+        <h3>Estrategias de Resolución de Problemas</h3>
+        <p>Las técnicas del atleta: organizar la información, usar diagramas y tablas, y encontrar caminos eficientes a la solución.</p>
+        <ul class="modulo-list">
+          <li><i class="fas fa-check"></i> Organización de información</li>
+          <li><i class="fas fa-check"></i> Uso de diagramas y tablas</li>
+          <li><i class="fas fa-check"></i> Métodos para encontrar soluciones eficientes</li>
+        </ul>
+      </div>
+
+      <div class="modulo-card modulo-featured">
+        <div class="modulo-head">
+          <span class="modulo-num">Módulo 6</span>
+          <span class="modulo-badge elite">Cierre</span>
+        </div>
+        <div class="modulo-icon"><i class="fas fa-brain"></i></div>
+        <h3>Pensamiento Crítico Aplicado</h3>
+        <p>La prueba final: evaluar argumentos, tomar decisiones basadas en evidencia y competir en retos reales de lógica.</p>
+        <ul class="modulo-list">
+          <li><i class="fas fa-check"></i> Evaluación de argumentos</li>
+          <li><i class="fas fa-check"></i> Toma de decisiones basada en evidencia</li>
+          <li><i class="fas fa-check"></i> Retos y competencias de lógica</li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section class="beneficios metodologia" id="metodologia">
+  <div class="wrap ben-grid">
+    <div>
+      <h2>¿Cómo entrenamos la lógica matemática?</h2>
+      <p>No enseñamos fórmulas de memoria. Entrenamos el hábito de pensar bien: cada sesión combina explicación breve, práctica guiada y retos individuales, con intensidad ajustada al nivel del niño.</p>
+    </div>
+    <div class="ben-list">
+      <div class="ben-item">
+        <div class="num">1</div>
+        <div><h4>Series progresivas</h4><p>Cada módulo parte del anterior. Tu hijo no enfrenta un problema difícil sin haber desarrollado primero el músculo necesario.</p></div>
+      </div>
+      <div class="ben-item">
+        <div class="num">2</div>
+        <div><h4>Evaluación constante</h4><p>Cada semana medimos velocidad de razonamiento, precisión y autonomía. Los padres reciben un reporte claro del avance.</p></div>
+      </div>
+      <div class="ben-item">
+        <div class="num">3</div>
+        <div><h4>Acertijos como entrenamiento</h4><p>Los problemas se disfrazan de juegos: así el cerebro aprende sin sentir fatiga y la práctica se vuelve hábito.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="habilidades" id="habilidades">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow"><i class="fas fa-trophy"></i> Resultados que se notan</div>
+      <h2>Lo que tu hijo se lleva al terminar</h2>
+      <p>Más que "saber matemáticas", tu hijo desarrollará una forma de pensar que se aplica a cualquier materia y a la vida diaria.</p>
+    </div>
+    <div class="skills-grid">
+      <div class="skill-card">
+        <div class="skill-icon"><i class="fas fa-magnifying-glass-chart"></i></div>
+        <h4>Observación analítica</h4>
+        <p>Dejará de leer problemas a la ligera: detectará datos clave, relaciones ocultas y patrones en cualquier situación.</p>
+      </div>
+      <div class="skill-card">
+        <div class="skill-icon"><i class="fas fa-diagram-next"></i></div>
+        <h4>Pensamiento estructurado</h4>
+        <p>Aprenderá a ordenar ideas antes de responder, evitando bloqueos y respuestas impulsivas.</p>
+      </div>
+      <div class="skill-card">
+        <div class="skill-icon"><i class="fas fa-scale-balanced"></i></div>
+        <h4>Argumentación sólida</h4>
+        <p>No solo dirá "creo que es así", sino "es así porque estas premisas me llevan a esta conclusión".</p>
+      </div>
+      <div class="skill-card">
+        <div class="skill-icon"><i class="fas fa-bolt"></i></div>
+        <h4>Resolución autónoma</h4>
+        <p>Enfrentará problemas nuevos sin esperar la respuesta: tendrá herramientas propias para buscar soluciones.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="testimonios" id="testimonios">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow"><i class="fas fa-star"></i> Padres de alumnos de Lógica Matemática</div>
+      <h2>Historias reales de progreso</h2>
+    </div>
+    <div class="test-grid">
+      <div class="test-card">
+        <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+        <p>Mi hijo pasó de evitar las matemáticas a pedirme que le ponga retos extra los fines de semana. El módulo de patrones fue el que lo enganchó.</p>
+        <div class="test-who"><div class="test-avatar">M</div><div><b>Marisol Quintero</b><span>Mamá de Andrés, 9 años</span></div></div>
+      </div>
+      <div class="test-card">
+        <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+        <p>En el colegio ya lo notan: levanta la mano primero en matemáticas y explica sus respuestas con seguridad. Se nota el entrenamiento.</p>
+        <div class="test-who"><div class="test-avatar">J</div><div><b>Jorge Ramírez</b><span>Papá de Sofía, 10 años</span></div></div>
+      </div>
+      <div class="test-card">
+        <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+        <p>Lo mejor es que no solo mejoró en matemáticas: ahora también razona mejor cuando discutimos en casa o cuando lee cualquier texto.</p>
+        <div class="test-who"><div class="test-avatar">A</div><div><b>Andrea López</b><span>Mamá de Emiliano, 11 años</span></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="agendar" id="agendar">
+  <div class="wrap">
+    <div class="agendar-box">
+      <div class="agendar-info">
+        <h2>Agenda la evaluación diagnóstica gratuita</h2>
+        <p>Una sesión sin costo donde identificamos el nivel de razonamiento lógico de tu hijo y te recomendamos si Lógica Matemática es el programa ideal.</p>
+        <div class="agendar-points">
+          <div><i class="fas fa-check"></i> Sin costo ni compromiso</div>
+          <div><i class="fas fa-check"></i> Reporte de resultados para los padres</div>
+          <div><i class="fas fa-check"></i> Recomendación de módulo de inicio</div>
+          <div><i class="fas fa-check"></i> Duración aproximada: 30 minutos</div>
+        </div>
+      </div>
+      <div class="agendar-form">
+        <h3>Reserva tu cupo</h3>
+        <p class="sub">Te contactaremos en menos de 24 horas para confirmar el horario.</p>
+        <form id="formAgenda" onsubmit="enviarFormulario(event)">
+          <div class="form-row">
+            <div class="field"><label for="nombrePadre">Nombre del padre/madre</label><input type="text" id="nombrePadre" required></div>
+            <div class="field"><label for="nombreHijo">Nombre del niño/a</label><input type="text" id="nombreHijo" required></div>
+          </div>
+          <div class="form-row">
+            <div class="field"><label for="edadHijo">Edad del niño/a</label><input type="number" id="edadHijo" min="7" max="12" required></div>
+            <div class="field"><label for="programaInteres">Programa</label>
+              <select id="programaInteres">
+                <option value="logica" selected>Lógica Matemática</option>
+                <option value="lectura">Comprensión Lectora</option>
+                <option value="algoritmos">Algoritmos Básicos</option>
+                <option value="no-seguro">No estoy seguro/a</option>
+              </select>
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="field full"><label for="emailPadre">Correo electrónico</label><input type="email" id="emailPadre" required></div>
+          </div>
+          <div class="form-row">
+            <div class="field full"><label for="telPadre">Teléfono / WhatsApp</label><input type="tel" id="telPadre" required></div>
+          </div>
+          <button type="submit" class="submit-btn"><i class="fas fa-paper-plane"></i> Solicitar evaluación gratuita</button>
+          <p class="form-note">Al enviar este formulario, aceptas que te contactemos para coordinar la sesión.</p>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div class="foot-brand"><span class="dot"></span>Gimnasio Mental</div>
+      <div class="foot-links">
+        <a href="index.html#programas">Programas</a>
+        <a href="index.html#beneficios">Beneficios</a>
+        <a href="index.html#testimonios">Testimonios</a>
+        <a href="#agendar">Agendar evaluación</a>
+      </div>
+      <div class="foot-social">
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-whatsapp"></i></a>
+        <a href="#"><i class="fab fa-facebook-f"></i></a>
+      </div>
+    </div>
+    <div class="foot-bottom">© 2026 Gimnasio Mental — Entrenamiento de pensamiento analítico para niños.</div>
+  </div>
+</footer>
+
+<script>
+function escapeXSS(str){ if(!str) return ''; return str.replace(/[&<>]/g, m => m === '&' ? '&amp;' : m === '<' ? '&lt;' : '&gt;'); }
+
+class NotificationSystem {
+  constructor(){ this.createContainer(); }
+  createContainer(){ if(!document.querySelector('.notification-container')){ const c=document.createElement('div'); c.className='notification-container'; document.body.appendChild(c); } }
+  showToast(message, type='info', duration=3500){
+    const container = document.querySelector('.notification-container');
+    const toast = document.createElement('div');
+    const icons = { success:'fa-check-circle', error:'fa-exclamation-circle', warning:'fa-exclamation-triangle', info:'fa-info-circle' };
+    const titles = { success:'Listo', error:'Error', warning:'Atención', info:'Información' };
+    toast.className = `notification notification-${type}`;
+    toast.innerHTML = `<div class="notification-icon"><i class="fas ${icons[type]}"></i></div>
+      <div class="notification-content"><div class="notification-title">${titles[type]}</div><div class="notification-message">${escapeXSS(message)}</div></div>
+      <button class="notification-close"><i class="fas fa-times"></i></button>`;
+    container.appendChild(toast);
+    setTimeout(()=> toast.remove(), duration);
+    toast.querySelector('.notification-close').onclick = () => toast.remove();
+  }
+}
+const notifier = new NotificationSystem();
+
+function enviarFormulario(e){
+  e.preventDefault();
+  const nombrePadre = document.getElementById('nombrePadre').value.trim();
+  const nombreHijo = document.getElementById('nombreHijo').value.trim();
+  const edadHijo = document.getElementById('edadHijo').value;
+
+  if(!nombrePadre || !nombreHijo || !edadHijo || !document.getElementById('emailPadre').value.trim() || !document.getElementById('telPadre').value.trim()){
+    notifier.showToast('Completa todos los campos para continuar', 'warning');
+    return;
+  }
+
+  notifier.showToast(`¡Gracias ${nombrePadre}! Te contactaremos pronto para agendar la evaluación de ${nombreHijo}.`, 'success');
+  document.getElementById('formAgenda').reset();
+}
+</script>
+
+</body>
+</html>

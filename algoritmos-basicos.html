@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Algoritmos Básicos | Gimnasio Mental</title>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header>
+  <div class="nav">
+    <div class="brand" onclick="location.href='index.html'" style="cursor:pointer"><span class="dot"></span>Gimnasio Mental</div>
+    <nav class="nav-links">
+      <a href="index.html#programas">Programas</a>
+      <a href="#modulos">Temario</a>
+      <a href="#metodologia">Metodología</a>
+      <a href="#habilidades">Habilidades</a>
+      <a href="#agendar">Contacto</a>
+    </nav>
+    <button class="nav-cta" onclick="document.getElementById('agendar').scrollIntoView({behavior:'smooth'})">Evaluación gratuita</button>
+  </div>
+</header>
+
+<section class="hero hero-program">
+  <div class="wrap hero-grid">
+    <div>
+      <a href="index.html#programas" class="back-link"><i class="fas fa-arrow-left"></i> Volver a programas</a>
+      <div class="eyebrow"><i class="fas fa-diagram-project"></i> Programa especializado · 8–13 años</div>
+      <h1>Algoritmos Básicos:<br>la rutina que entrena<br><span class="accent">pensar paso a paso</span>.</h1>
+      <p class="lead">Siete módulos progresivos donde tu hijo aprenderá a estructurar soluciones, diseñar procesos y crear sus propios algoritmos, usando lógica computacional como las pesas de su entrenamiento mental.</p>
+      <div class="hero-ctas">
+        <button class="btn-primary" onclick="document.getElementById('agendar').scrollIntoView({behavior:'smooth'})">
+          <i class="fas fa-calendar-check"></i> Agendar evaluación gratuita
+        </button>
+        <button class="btn-secondary" onclick="document.getElementById('modulos').scrollIntoView({behavior:'smooth'})">Ver temario</button>
+      </div>
+      <div class="hero-stats">
+        <div class="stat"><b>7</b><span>módulos progresivos</span></div>
+        <div class="stat"><b>1</b><span>sesión por semana</span></div>
+        <div class="stat"><b>+1,200</b><span>niños entrenados</span></div>
+      </div>
+    </div>
+    <div class="hero-visual">
+      <div class="rep-bar">
+        <div class="rep-bar-head"><span>Rutina actual</span><b>Módulo 4 de 7</b></div>
+        <div class="set"><div class="label">Pensamiento computacional</div><div class="track"><div class="fill" style="width:100%"></div></div><div class="pct">100%</div></div>
+        <div class="set"><div class="label">Secuencias lógicas</div><div class="track"><div class="fill" style="width:100%"></div></div><div class="pct">100%</div></div>
+        <div class="set"><div class="label">Diagramas de flujo</div><div class="track"><div class="fill" style="width:100%"></div></div><div class="pct">100%</div></div>
+        <div class="set"><div class="label">Algoritmos cotidianos</div><div class="track"><div class="fill" style="width:45%"></div></div><div class="pct">45%</div></div>
+        <div class="rep-bar-foot"><i class="fas fa-bolt"></i> 3 series más para subir al Módulo 5</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="programas modulos" id="modulos">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow"><i class="fas fa-list-ol"></i> Temario completo</div>
+      <h2>Siete módulos, una rutina progresiva</h2>
+      <p>Cada módulo se construye sobre el anterior: de entender qué es un algoritmo a diseñar el propio. Como en el gimnasio, la intensidad sube conforme tu hijo gana resistencia mental.</p>
+    </div>
+
+    <div class="modulos-grid">
+
+      <div class="modulo-card">
+        <div class="modulo-head">
+          <span class="modulo-num">Módulo 1</span>
+          <span class="modulo-badge intro">Base</span>
+        </div>
+        <div class="modulo-icon"><i class="fas fa-lightbulb"></i></div>
+        <h3>Introducción al Pensamiento Computacional</h3>
+        <p>El calentamiento: entender qué es un algoritmo, cómo resolver problemas cotidianos con lógica y por qué organizar procesos es la base de todo.</p>
+        <ul class="modulo-list">
+          <li><i class="fas fa-check"></i> ¿Qué es un algoritmo?</li>
+          <li><i class="fas fa-check"></i> Resolución de problemas cotidianos</li>
+          <li><i class="fas fa-check"></i> Importancia de la organización de procesos</li>
+        </ul>
+      </div>
+
+      <div class="modulo-card">
+        <div class="modulo-head">
+          <span class="modulo-num">Módulo 2</span>
+          <span class="modulo-badge core">Central</span>
+        </div>
+        <div class="modulo-icon"><i class="fas fa-list-check"></i></div>
+        <h3>Secuencias Lógicas</h3>
+        <p>La primera serie de peso: ordenar pasos para resolver problemas, practicar secuenciación y dar instrucciones claras y precisas.</p>
+        <ul class="modulo-list">
+          <li><i class="fas fa-check"></i> Pasos ordenados para resolver problemas</li>
+          <li><i class="fas fa-check"></i> Actividades de secuenciación</li>
+          <li><i class="fas fa-check"></i> Instrucciones claras y precisas</li>
+        </ul>
+      </div>
+
+      <div class="modulo-card">
+        <div class="modulo-head">
+          <span class="modulo-num">Módulo 3</span>
+          <span class="modulo-badge core">Central</span>
+        </div>
+        <div class="modulo-icon"><i class="fas fa-diagram-project"></i></div>
+        <h3>Diagramas de Flujo</h3>
+        <p>Aquí se construye fuerza mental: aprender los símbolos básicos, representar procesos gráficamente y crear diagramas simples que cualquiera pueda seguir.</p>
+        <ul class="modulo-list">
+          <li><i class="fas fa-check"></i> Símbolos básicos</li>
+          <li><i class="fas fa-check"></i> Representación gráfica de procesos</li>
+          <li><i class="fas fa-check"></i> Creación de diagramas simples</li>
+        </ul>
+      </div>
+
+      <div class="modulo-card">
+        <div class="modulo-head">
+          <span class="modulo-num">Módulo 4</span>
+          <span class="modulo-badge core">Central</span>
+        </div>
+        <div class="modulo-icon"><i class="fas fa-utensils"></i></div>
+        <h3>Algoritmos en la Vida Diaria</h3>
+        <p>El complemento perfecto: detectar algoritmos en recetas, instrucciones de juegos y procedimientos escolares, para entender que la lógica está en todas partes.</p>
+        <ul class="modulo-list">
+          <li><i class="fas fa-check"></i> Recetas</li>
+          <li><i class="fas fa-check"></i> Instrucciones de juegos</li>
+          <li><i class="fas fa-check"></i> Procedimientos escolares</li>
+        </ul>
+      </div>
+
+      <div class="modulo-card">
+        <div class="modulo-head">
+          <span class="modulo-num">Módulo 5</span>
+          <span class="modulo-badge advanced">Avanzado</span>
+        </div>
+        <div class="modulo-icon"><i class="fas fa-puzzle-piece"></i></div>
+        <h3>Resolución Estructurada de Problemas</h3>
+        <p>Las técnicas del atleta: analizar el problema antes de actuar, diseñar soluciones paso a paso y verificar que los resultados sean correctos.</p>
+        <ul class="modulo-list">
+          <li><i class="fas fa-check"></i> Análisis del problema</li>
+          <li><i class="fas fa-check"></i> Diseño de soluciones</li>
+          <li><i class="fas fa-check"></i> Verificación de resultados</li>
+        </ul>
+      </div>
+
+      <div class="modulo-card">
+        <div class="modulo-head">
+          <span class="modulo-num">Módulo 6</span>
+          <span class="modulo-badge advanced">Avanzado</span>
+        </div>
+        <div class="modulo-icon"><i class="fas fa-code"></i></div>
+        <h3>Introducción a la Programación</h3>
+        <p>El salto a la práctica real: conceptos básicos de programación, variables, secuencias y retos de programación visual diseñados para niños.</p>
+        <ul class="modulo-list">
+          <li><i class="fas fa-check"></i> Conceptos básicos de programación</li>
+          <li><i class="fas fa-check"></i> Variables y secuencias</li>
+          <li><i class="fas fa-check"></i> Retos de programación visual para niños</li>
+        </ul>
+      </div>
+
+      <div class="modulo-card modulo-featured">
+        <div class="modulo-head">
+          <span class="modulo-num">Módulo 7</span>
+          <span class="modulo-badge elite">Cierre</span>
+        </div>
+        <div class="modulo-icon"><i class="fas fa-rocket"></i></div>
+        <h3>Proyecto Final</h3>
+        <p>La prueba final: diseñar un algoritmo propio desde cero, crear su diagrama de flujo y presentarlo explicando cada decisión tomada.</p>
+        <ul class="modulo-list">
+          <li><i class="fas fa-check"></i> Diseño de un algoritmo propio</li>
+          <li><i class="fas fa-check"></i> Creación de un diagrama de flujo</li>
+          <li><i class="fas fa-check"></i> Presentación y explicación de la solución</li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section class="beneficios metodologia" id="metodologia">
+  <div class="wrap ben-grid">
+    <div>
+      <h2>¿Cómo entrenamos los algoritmos?</h2>
+      <p>No enseñamos a programar de memoria. Entrenamos a pensar como un ingeniero: cada módulo combina ejercicios prácticos, juegos educativos, desafíos de razonamiento, trabajo colaborativo y actividades interactivas adaptadas a la edad de cada niño.</p>
+    </div>
+    <div class="ben-list">
+      <div class="ben-item">
+        <div class="num">1</div>
+        <div><h4>Juegos y desafíos</h4><p>Los conceptos abstractos se vuelven tangibles a través de retos gamificados: así el cerebro aprende sin sentir fatiga y la práctica se vuelve hábito.</p></div>
+      </div>
+      <div class="ben-item">
+        <div class="num">2</div>
+        <div><h4>Trabajo colaborativo</h4><p>Los niños resuelven problemas en equipo, discuten soluciones y aprenden a comunicar sus algoritmos con claridad, como lo harían en un equipo real de desarrollo.</p></div>
+      </div>
+      <div class="ben-item">
+        <div class="num">3</div>
+        <div><h4>Proyecto final real</h4><p>Al terminar, cada niño presenta un algoritmo propio ante el grupo: no solo lo construye, sino que lo defiende, lo explica y lo mejora con feedback.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="habilidades" id="habilidades">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow"><i class="fas fa-trophy"></i> Resultados que se notan</div>
+      <h2>Lo que tu hijo se lleva al terminar</h2>
+      <p>Más que "saber programar", tu hijo desarrollará una forma de pensar estructurada que se aplica a cualquier problema, materia o decisión.</p>
+    </div>
+    <div class="skills-grid">
+      <div class="skill-card">
+        <div class="skill-icon"><i class="fas fa-diagram-next"></i></div>
+        <h4>Pensamiento estructurado</h4>
+        <p>Aprenderá a dividir cualquier problema grande en pasos pequeños y manejables, sin bloquearse ante la complejidad.</p>
+      </div>
+      <div class="skill-card">
+        <div class="skill-icon"><i class="fas fa-arrows-spin"></i></div>
+        <h4>Lógica de procesos</h4>
+        <p>Entenderá que todo resultado depende del orden y la calidad de los pasos previos, y aplicará eso a tareas escolares y cotidianas.</p>
+      </div>
+      <div class="skill-card">
+        <div class="skill-icon"><i class="fas fa-bug-slash"></i></div>
+        <h4>Detección y corrección de errores</h4>
+        <p>Desarrollará la paciencia para revisar su propio trabajo, encontrar fallas y corregirlas sin frustrarse.</p>
+      </div>
+      <div class="skill-card">
+        <div class="skill-icon"><i class="fas fa-bolt"></i></div>
+        <h4>Creación autónoma</h4>
+        <p>No solo seguirá instrucciones: será capaz de diseñar sus propias soluciones desde cero y presentarlas con seguridad.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="testimonios" id="testimonios">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow"><i class="fas fa-star"></i> Padres de alumnos de Algoritmos Básicos</div>
+      <h2>Historias reales de progreso</h2>
+    </div>
+    <div class="test-grid">
+      <div class="test-card">
+        <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+        <p>Mi hijo ahora explica cómo hacer las cosas paso a paso, como si fuera un manual. Hasta me ayuda a armar muebles siguiendo instrucciones.</p>
+        <div class="test-who"><div class="test-avatar">S</div><div><b>Sandra Villamizar</b><span>Mamá de Tomás, 10 años</span></div></div>
+      </div>
+      <div class="test-card">
+        <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+        <p>El proyecto final fue impresionante: diseñó un algoritmo para organizar su cuarto y lo presentó con un diagrama de flujo hecho a mano. Nunca lo había visto tan orgulloso.</p>
+        <div class="test-who"><div class="test-avatar">F</div><div><b>Felipe Castillo</b><span>Papá de Emilia, 12 años</span></div></div>
+      </div>
+      <div class="test-card">
+        <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+        <p>Lo que más me gustó es que no solo aprendió lógica: mejoró su forma de estudiar, de hacer tareas y hasta de resolver peleas con sus hermanos. Piensa antes de actuar.</p>
+        <div class="test-who"><div class="test-avatar">N</div><div><b>Natalia Ríos</b><span>Mamá de Sebastián, 9 años</span></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="agendar" id="agendar">
+  <div class="wrap">
+    <div class="agendar-box">
+      <div class="agendar-info">
+        <h2>Agenda la evaluación diagnóstica gratuita</h2>
+        <p>Una sesión sin costo donde identificamos el nivel de pensamiento computacional de tu hijo y te recomendamos si Algoritmos Básicos es el programa ideal.</p>
+        <div class="agendar-points">
+          <div><i class="fas fa-check"></i> Sin costo ni compromiso</div>
+          <div><i class="fas fa-check"></i> Reporte de resultados para los padres</div>
+          <div><i class="fas fa-check"></i> Recomendación de módulo de inicio</div>
+          <div><i class="fas fa-check"></i> Duración aproximada: 30 minutos</div>
+        </div>
+      </div>
+      <div class="agendar-form">
+        <h3>Reserva tu cupo</h3>
+        <p class="sub">Te contactaremos en menos de 24 horas para confirmar el horario.</p>
+        <form id="formAgenda" onsubmit="enviarFormulario(event)">
+          <div class="form-row">
+            <div class="field"><label for="nombrePadre">Nombre del padre/madre</label><input type="text" id="nombrePadre" required></div>
+            <div class="field"><label for="nombreHijo">Nombre del niño/a</label><input type="text" id="nombreHijo" required></div>
+          </div>
+          <div class="form-row">
+            <div class="field"><label for="edadHijo">Edad del niño/a</label><input type="number" id="edadHijo" min="8" max="13" required></div>
+            <div class="field"><label for="programaInteres">Programa</label>
+              <select id="programaInteres">
+                <option value="logica">Lógica Matemática</option>
+                <option value="lectura">Comprensión Lectora</option>
+                <option value="algoritmos" selected>Algoritmos Básicos</option>
+                <option value="no-seguro">No estoy seguro/a</option>
+              </select>
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="field full"><label for="emailPadre">Correo electrónico</label><input type="email" id="emailPadre" required></div>
+          </div>
+          <div class="form-row">
+            <div class="field full"><label for="telPadre">Teléfono / WhatsApp</label><input type="tel" id="telPadre" required></div>
+          </div>
+          <button type="submit" class="submit-btn"><i class="fas fa-paper-plane"></i> Solicitar evaluación gratuita</button>
+          <p class="form-note">Al enviar este formulario, aceptas que te contactemos para coordinar la sesión.</p>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div class="foot-brand"><span class="dot"></span>Gimnasio Mental</div>
+      <div class="foot-links">
+        <a href="index.html#programas">Programas</a>
+        <a href="index.html#beneficios">Beneficios</a>
+        <a href="index.html#testimonios">Testimonios</a>
+        <a href="#agendar">Agendar evaluación</a>
+      </div>
+      <div class="foot-social">
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-whatsapp"></i></a>
+        <a href="#"><i class="fab fa-facebook-f"></i></a>
+      </div>
+    </div>
+    <div class="foot-bottom">© 2026 Gimnasio Mental — Entrenamiento de pensamiento analítico para niños.</div>
+  </div>
+</footer>
+
+<script>
+function escapeXSS(str){ if(!str) return ''; return str.replace(/[&<>]/g, m => m === '&' ? '&amp;' : m === '<' ? '&lt;' : '&gt;'); }
+
+class NotificationSystem {
+  constructor(){ this.createContainer(); }
+  createContainer(){ if(!document.querySelector('.notification-container')){ const c=document.createElement('div'); c.className='notification-container'; document.body.appendChild(c); } }
+  showToast(message, type='info', duration=3500){
+    const container = document.querySelector('.notification-container');
+    const toast = document.createElement('div');
+    const icons = { success:'fa-check-circle', error:'fa-exclamation-circle', warning:'fa-exclamation-triangle', info:'fa-info-circle' };
+    const titles = { success:'Listo', error:'Error', warning:'Atención', info:'Información' };
+    toast.className = `notification notification-${type}`;
+    toast.innerHTML = `<div class="notification-icon"><i class="fas ${icons[type]}"></i></div>
+      <div class="notification-content"><div class="notification-title">${titles[type]}</div><div class="notification-message">${escapeXSS(message)}</div></div>
+      <button class="notification-close"><i class="fas fa-times"></i></button>`;
+    container.appendChild(toast);
+    setTimeout(()=> toast.remove(), duration);
+    toast.querySelector('.notification-close').onclick = () => toast.remove();
+  }
+}
+const notifier = new NotificationSystem();
+
+function enviarFormulario(e){
+  e.preventDefault();
+  const nombrePadre = document.getElementById('nombrePadre').value.trim();
+  const nombreHijo = document.getElementById('nombreHijo').value.trim();
+  const edadHijo = document.getElementById('edadHijo').value;
+
+  if(!nombrePadre || !nombreHijo || !edadHijo || !document.getElementById('emailPadre').value.trim() || !document.getElementById('telPadre').value.trim()){
+    notifier.showToast('Completa todos los campos para continuar', 'warning');
+    return;
+  }
+
+  notifier.showToast(`¡Gracias ${nombrePadre}! Te contactaremos pronto para agendar la evaluación de ${nombreHijo}.`, 'success');
+  document.getElementById('formAgenda').reset();
+}
+</script>
+
+</body>
+</html>

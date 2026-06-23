@@ -64,27 +64,30 @@
     <div class="cards-grid">
 
       <div class="card c1">
-        <div class="card-icon"><i class="fas fa-square-root-variable"></i></div>
+        <img class="card-img" src="logica.png" alt="Lógica Matemática">
         <h3>Lógica Matemática</h3>
         <p class="desc">Ejercicios de razonamiento numérico y patrones que convierten "no entiendo matemáticas" en "encontré la forma de resolverlo".</p>
         <div class="skills"><span>Patrones</span><span>Problemas</span><span>Razonamiento</span></div>
         <div class="meta"><span>Edad <b>7–12 años</b></span><span><b>2</b> sesiones/sem</span></div>
+        <button class="card-btn" onclick="agendarPrograma('logica')">Agendar evaluación <i class="fas fa-arrow-right"></i></button>
       </div>
 
       <div class="card c2">
-        <div class="card-icon"><i class="fas fa-book-open"></i></div>
+        <img class="card-img" src="lectura.png" alt="Comprensión Lectora">
         <h3>Comprensión Lectora</h3>
         <p class="desc">Entrena la capacidad de leer entre líneas, inferir y argumentar, la base de todo pensamiento crítico futuro.</p>
         <div class="skills"><span>Inferencia</span><span>Análisis</span><span>Vocabulario</span></div>
         <div class="meta"><span>Edad <b>6–12 años</b></span><span><b>2</b> sesiones/sem</span></div>
+        <button class="card-btn" onclick="agendarPrograma('lectura')">Agendar evaluación <i class="fas fa-arrow-right"></i></button>
       </div>
 
       <div class="card c3">
-        <div class="card-icon"><i class="fas fa-diagram-project"></i></div>
+        <img class="card-img" src="algoritmos.png" alt="Algoritmos Básicos">
         <h3>Algoritmos Básicos</h3>
         <p class="desc">Pensamiento computacional sin pantallas complicadas: secuencias, condiciones y lógica paso a paso para resolver cualquier problema.</p>
         <div class="skills"><span>Secuencias</span><span>Lógica</span><span>Resolución</span></div>
         <div class="meta"><span>Edad <b>8–13 años</b></span><span><b>1</b> sesión/sem</span></div>
+        <button class="card-btn" onclick="agendarPrograma('algoritmos')">Agendar evaluación <i class="fas fa-arrow-right"></i></button>
       </div>
 
     </div>
@@ -178,6 +181,9 @@
           <div class="form-row">
             <div class="field full"><label for="telPadre">Teléfono / WhatsApp</label><input type="tel" id="telPadre" required></div>
           </div>
+          <div class="form-row">
+            <div class="field full"><label for="comentarios">Comentarios adicionales</label><textarea id="comentarios" rows="3" placeholder="Cuéntanos algo más sobre tu hijo/a (opcional)"></textarea></div>
+          </div>
           <button type="submit" class="submit-btn"><i class="fas fa-paper-plane"></i> Solicitar evaluación gratuita</button>
           <p class="form-note">Al enviar este formulario, aceptas que te contactemos para coordinar la sesión.</p>
         </form>
@@ -234,6 +240,12 @@ class NotificationSystem {
 }
 const notifier = new NotificationSystem();
 
+function agendarPrograma(programa){
+  document.getElementById('agendar').scrollIntoView({behavior:'smooth'});
+  const select = document.getElementById('programaInteres');
+  if (select) select.value = programa;
+}
+
 async function enviarFormulario(e){
   e.preventDefault();
   const nombrePadre = document.getElementById('nombrePadre').value.trim();
@@ -242,6 +254,7 @@ async function enviarFormulario(e){
   const programaInteres = document.getElementById('programaInteres').value;
   const emailPadre = document.getElementById('emailPadre').value.trim();
   const telPadre = document.getElementById('telPadre').value.trim();
+  const comentarios = document.getElementById('comentarios').value.trim();
 
   if(!nombrePadre || !nombreHijo || !edadHijo || !emailPadre || !telPadre){
     notifier.showToast('Completa todos los campos para continuar', 'warning');
@@ -260,7 +273,8 @@ async function enviarFormulario(e){
       edad_hijo: parseInt(edadHijo, 10),
       programa_interes: programaInteres,
       email_padre: emailPadre,
-      tel_padre: telPadre
+      tel_padre: telPadre,
+      comentarios: comentarios || null
     });
 
     if (error) throw error;

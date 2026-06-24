@@ -88,7 +88,7 @@ header{
 .stat b{font-family:'Space Grotesk',sans-serif;font-size:1.6rem;color:var(--azul);display:block;}
 .stat span{font-size:0.85rem;color:rgba(22,36,31,0.6);}
 
-/* Signature visual: barra de "series mentales" */
+/* ===== HERO VISUAL ===== */
 .hero-visual{position:relative;display:flex;justify-content:center;}
 .rep-bar{
   background:#fff;border-radius:24px;padding:30px 28px;
@@ -109,7 +109,7 @@ header{
 .rep-bar-foot{margin-top:18px;padding-top:16px;border-top:1px dashed var(--linea);font-size:0.82rem;color:rgba(22,36,31,0.6);display:flex;align-items:center;gap:8px;}
 .rep-bar-foot i{color:var(--amarillo);}
 
-/* ===== PROGRAMAS (3 CARDS) ===== */
+/* ===== PROGRAMAS ===== */
 .programas{padding:90px 0;}
 .section-head{text-align:center;max-width:620px;margin:0 auto 56px;}
 .section-head .eyebrow{margin-bottom:16px;}
@@ -124,9 +124,7 @@ header{
   position:relative;overflow:hidden;
 }
 .card:hover{transform:translateY(-6px);box-shadow:0 20px 40px rgba(27,77,62,0.12);}
-.card::before{
-  content:'';position:absolute;top:0;left:0;right:0;height:5px;
-}
+.card::before{content:'';position:absolute;top:0;left:0;right:0;height:5px;}
 .card.c1::before{background:var(--verde);}
 .card.c2::before{background:var(--azul);}
 .card.c3::before{background:var(--amarillo);}
@@ -137,13 +135,6 @@ header{
 .card.c1 .card-icon{background:var(--verde);}
 .card.c2 .card-icon{background:var(--azul);}
 .card.c3 .card-icon{background:var(--amarillo);color:var(--tinta);}
-.card-img{
-  width:100%;height:140px;object-fit:cover;border-radius:14px;margin-bottom:22px;
-  background:rgba(27,77,62,0.06);
-}
-.card.c1 .card-img{border-bottom:3px solid var(--verde);}
-.card.c2 .card-img{border-bottom:3px solid var(--azul);}
-.card.c3 .card-img{border-bottom:3px solid var(--amarillo);}
 .card h3{font-size:1.28rem;color:var(--verde);margin-bottom:10px;font-weight:700;}
 .card p.desc{color:rgba(22,36,31,0.68);font-size:0.96rem;margin-bottom:20px;}
 .card .skills{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:22px;}
@@ -162,7 +153,7 @@ header{
 }
 .card-btn:hover{background:var(--azul);color:#fff;border-color:var(--azul);}
 
-/* ===== POR QUÉ / BENEFICIOS ===== */
+/* ===== BENEFICIOS ===== */
 .beneficios{padding:90px 0;background:var(--verde);color:#fff;position:relative;overflow:hidden;}
 .beneficios::after{
   content:'';position:absolute;right:-120px;top:-120px;width:340px;height:340px;
@@ -178,7 +169,7 @@ header{
   width:38px;height:38px;border-radius:50%;background:rgba(244,196,48,0.18);color:var(--amarillo);
   display:flex;align-items:center;justify-content:center;flex-shrink:0;
 }
-.ben-item h4{font-size:1.04rem;margin-bottom:5px;font-weight:600;}
+.ben-item h4{font-size:1.04rem;margin-bottom:5px;font-weight:600;color:#ffffff;}
 .ben-item p{color:rgba(255,255,255,0.7);font-size:0.92rem;}
 
 /* ===== TESTIMONIOS ===== */
@@ -186,6 +177,7 @@ header{
 .test-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;}
 .test-card{
   background:#fff;border:1px solid var(--linea);border-radius:20px;padding:30px;
+  border-left:5px solid var(--amarillo);
 }
 .stars{color:var(--amarillo);margin-bottom:16px;font-size:0.9rem;}
 .test-card p{font-size:0.96rem;color:rgba(22,36,31,0.78);margin-bottom:20px;font-style:italic;}
@@ -194,10 +186,10 @@ header{
   width:42px;height:42px;border-radius:50%;background:var(--azul);color:#fff;
   display:flex;align-items:center;justify-content:center;font-weight:700;font-family:'Space Grotesk',sans-serif;
 }
-.test-who b{display:block;font-size:0.9rem;}
+.test-who b{display:block;font-size:0.9rem;color:var(--tinta);}
 .test-who span{font-size:0.8rem;color:rgba(22,36,31,0.55);}
 
-/* ===== FORMULARIO AGENDAR ===== */
+/* ===== AGENDAR ===== */
 .agendar{padding:90px 0 110px;background:var(--crema);}
 .agendar-box{
   background:#fff;border-radius:28px;border:1px solid var(--linea);
@@ -205,19 +197,18 @@ header{
   display:grid;grid-template-columns:0.95fr 1.05fr;overflow:hidden;
 }
 .agendar-info{
-  background:var(--azul);color:#fff;padding:50px 42px;display:flex;flex-direction:column;justify-content:center;
-  position:relative;
+  background:var(--azul);color:#fff;padding:50px 42px;
+  display:flex;flex-direction:column;justify-content:center;position:relative;
 }
 .agendar-info::before{
-  content:'';position:absolute;left:-80px;bottom:-80px;width:220px;height:220px;border-radius:50%;
-  background:rgba(244,196,48,0.10);
+  content:'';position:absolute;left:-80px;bottom:-80px;width:220px;height:220px;
+  border-radius:50%;background:rgba(244,196,48,0.10);
 }
 .agendar-info h2{font-size:1.7rem;margin-bottom:16px;position:relative;z-index:1;font-weight:700;}
 .agendar-info p{color:rgba(255,255,255,0.8);font-size:0.96rem;margin-bottom:26px;position:relative;z-index:1;}
 .agendar-points{display:flex;flex-direction:column;gap:14px;position:relative;z-index:1;}
 .agendar-points div{display:flex;gap:10px;align-items:center;font-size:0.9rem;color:rgba(255,255,255,0.92);}
 .agendar-points i{color:var(--amarillo);}
-
 .agendar-form{padding:50px 42px;}
 .agendar-form h3{font-size:1.2rem;color:var(--verde);margin-bottom:6px;font-weight:700;}
 .agendar-form .sub{font-size:0.88rem;color:rgba(22,36,31,0.6);margin-bottom:26px;}
@@ -231,7 +222,7 @@ header{
   transition:border-color .2s;
 }
 .field input:focus,.field select:focus,.field textarea:focus{outline:none;border-color:var(--azul);background:#fff;}
-.field textarea{resize:vertical;font-family:'Inter',sans-serif;}
+.field textarea{resize:vertical;}
 .submit-btn{
   width:100%;background:var(--azul);color:#fff;border:none;border-radius:10px;
   padding:15px;font-size:0.98rem;font-weight:700;cursor:pointer;margin-top:8px;
@@ -240,6 +231,21 @@ header{
 }
 .submit-btn:hover{background:var(--verde);transform:translateY(-1px);}
 .form-note{font-size:0.78rem;color:rgba(22,36,31,0.5);margin-top:12px;text-align:center;}
+
+/* ===== MÓDULOS (páginas de detalle) ===== */
+.modulos-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(380px,1fr));gap:24px;margin-top:40px;}
+.modulo-card{background:#fff;border-radius:16px;padding:28px;box-shadow:0 10px 30px rgba(0,0,0,0.07);transition:all .3s;}
+.modulo-card:hover{box-shadow:0 15px 40px rgba(0,0,0,0.1);transform:translateY(-4px);}
+.modulo-head{display:flex;align-items:center;gap:12px;margin-bottom:16px;}
+.modulo-num{font-size:1.1rem;font-weight:700;color:#64748b;}
+.modulo-badge{font-size:0.8rem;padding:4px 12px;border-radius:999px;font-weight:600;}
+.intro{background:#e0f2fe;color:#0369a1;}
+.core{background:#dbeafe;color:#1e40af;}
+.advanced{background:#fef3c7;color:#d97706;}
+.elite{background:#f3e8ff;color:#7c3aed;}
+.modulo-icon{font-size:2.2rem;margin:16px 0;}
+.modulo-list{list-style:none;margin-top:20px;}
+.modulo-list li{padding:8px 0;display:flex;align-items:center;gap:10px;color:#475569;}
 
 /* ===== FOOTER ===== */
 footer{background:var(--tinta);color:rgba(255,255,255,0.7);padding:50px 0 30px;}
@@ -286,6 +292,6 @@ footer{background:var(--tinta);color:rgba(255,255,255,0.7);padding:50px 0 30px;}
   .agendar-info,.agendar-form{padding:36px 26px;}
   .foot-grid{flex-direction:column;}
 }
-@media (prefers-reduced-motion: reduce){
+@media (prefers-reduced-motion:reduce){
   *{animation-duration:0.01ms !important;transition-duration:0.01ms !important;}
 }

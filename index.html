@@ -68,7 +68,7 @@
         <p class="desc">Ejercicios de razonamiento numérico y patrones que convierten "no entiendo matemáticas" en "encontré la forma de resolverlo".</p>
         <div class="skills"><span>Patrones</span><span>Problemas</span><span>Razonamiento</span></div>
         <div class="meta"><span>Edad <b>7–12 años</b></span><span><b>2</b> sesiones/sem</span></div>
-        <a href="logica-matematica.html"> Ver más </a>
+        <a href="logica-matematica.html" class="card-btn"><i class="fas fa-arrow-right"></i> Ver programa</a>
       </div>
 
       <div class="card c2">
@@ -77,7 +77,7 @@
         <p class="desc">Entrena la capacidad de leer entre líneas, inferir y argumentar, la base de todo pensamiento crítico futuro.</p>
         <div class="skills"><span>Inferencia</span><span>Análisis</span><span>Vocabulario</span></div>
         <div class="meta"><span>Edad <b>6–12 años</b></span><span><b>2</b> sesiones/sem</span></div>
-        <a href="comprension-lectora.html"> Ver más </a>
+        <a href="comprension-lectora.html" class="card-btn"><i class="fas fa-arrow-right"></i> Ver programa</a>
       </div>
 
       <div class="card c3">
@@ -86,7 +86,7 @@
         <p class="desc">Pensamiento computacional sin pantallas complicadas: secuencias, condiciones y lógica paso a paso para resolver cualquier problema.</p>
         <div class="skills"><span>Secuencias</span><span>Lógica</span><span>Resolución</span></div>
         <div class="meta"><span>Edad <b>8–13 años</b></span><span><b>1</b> sesión/sem</span></div>
-        <a href="algoritmos-basicos.html"> Ver más </a>
+        <a href="algoritmos-basicos.html" class="card-btn"><i class="fas fa-arrow-right"></i> Ver programa</a>
       </div>
 
     </div>
@@ -208,7 +208,13 @@
   </div>
 </footer>
 
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 <script>
+const SUPABASE_URL = 'https://qsdrtvgsyjzzsqaqwlpz.supabase.co';
+const SUPABASE_KEY = 'sb_publishable_SKwEPb7pvaMTma0d8_AUDw_rGvIdj-s';
+const { createClient } = supabase;
+const db = createClient(SUPABASE_URL, SUPABASE_KEY);
+
 function escapeXSS(str){ if(!str) return ''; return str.replace(/[&<>]/g, m => m === '&' ? '&amp;' : m === '<' ? '&lt;' : '&gt;'); }
 
 class NotificationSystem {
@@ -230,26 +236,43 @@ class NotificationSystem {
 }
 const notifier = new NotificationSystem();
 
-function enviarFormulario(e){
+async function enviarFormulario(e){
   e.preventDefault();
+  const btn = e.target.querySelector('.submit-btn');
   const nombrePadre = document.getElementById('nombrePadre').value.trim();
-  const nombreHijo = document.getElementById('nombreHijo').value.trim();
-  const edadHijo = document.getElementById('edadHijo').value;
-  const emailPadre = document.getElementById('emailPadre').value.trim();
-  const telPadre = document.getElementById('telPadre').value.trim();
+  const nombreHijo  = document.getElementById('nombreHijo').value.trim();
+  const edadHijo    = document.getElementById('edadHijo').value;
+  const emailPadre  = document.getElementById('emailPadre').value.trim();
+  const telPadre    = document.getElementById('telPadre').value.trim();
+  const programa    = document.getElementById('programaInteres').value;
 
   if(!nombrePadre || !nombreHijo || !edadHijo || !emailPadre || !telPadre){
     notifier.showToast('Completa todos los campos para continuar', 'warning');
     return;
   }
 
-  // Aquí se conectaría a Supabase u otro backend para guardar la solicitud:
-  // await db.from('solicitudes_evaluacion').insert({ nombre_padre, nombre_hijo, edad_hijo, email_padre, tel_padre, programa_interes });
+  btn.disabled = true;
+  btn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Enviando...';
+
+  const { error } = await db.from('solicitudes_evaluacion').insert({
+    nombre_padre:     nombrePadre,
+    nombre_hijo:      nombreHijo,
+    edad_hijo:        parseInt(edadHijo),
+    programa_interes: programa,
+    email_padre:      emailPadre,
+    tel_padre:        telPadre
+  });
+
+  btn.disabled = false;
+  btn.innerHTML = '<i class="fas fa-paper-plane"></i> Solicitar evaluación gratuita';
+
+  if(error){
+    console.error(error);
+    notifier.showToast('Hubo un error al enviar. Intenta de nuevo.', 'error');
+    return;
+  }
 
   notifier.showToast(`¡Gracias ${nombrePadre}! Te contactaremos pronto para agendar la evaluación de ${nombreHijo}.`, 'success');
   document.getElementById('formAgenda').reset();
 }
 </script>
-
-</body>
-</html>

@@ -7,282 +7,275 @@
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 <link rel="stylesheet" href="styles.css">
+<style>
+:root{
+  --verde: #1B4D3E;
+  --verde-claro: #2D6E58;
+  --amarillo: #F4C430;
+  --azul: #1E3A5F;
+  --crema: #FAF7F0;
+  --tinta: #16241F;
+  --linea: rgba(27,77,62,0.14);
+}
+*{box-sizing:border-box;margin:0;padding:0;}
+html{scroll-behavior:smooth;}
+body{font-family:'Inter',sans-serif;background:var(--crema);color:var(--tinta);line-height:1.55;-webkit-font-smoothing:antialiased;}
+h1,h2,h3,h4{font-family:'Space Grotesk',sans-serif;letter-spacing:-0.01em;}
+a{text-decoration:none;color:inherit;}
+.wrap{max-width:1140px;margin:0 auto;padding:0 28px;}
+
+/* HEADER */
+header{position:sticky;top:0;z-index:50;background:rgba(250,247,240,0.92);backdrop-filter:blur(8px);border-bottom:1px solid var(--linea);}
+.nav{display:flex;align-items:center;justify-content:space-between;padding:18px 28px;max-width:1140px;margin:0 auto;}
+.brand{display:flex;align-items:center;gap:10px;font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:1.25rem;color:var(--verde);}
+.brand .dot{width:10px;height:10px;border-radius:50%;background:var(--amarillo);box-shadow:0 0 0 4px rgba(244,196,48,0.25);}
+.nav-links{display:flex;gap:34px;font-size:0.95rem;font-weight:500;}
+.nav-links a{color:var(--tinta);opacity:0.75;transition:opacity .2s;}
+.nav-links a:hover{opacity:1;}
+.nav-cta{background:var(--azul);color:#fff;padding:11px 22px;border-radius:999px;font-weight:600;font-size:0.92rem;border:none;cursor:pointer;transition:transform .15s ease,background .2s;}
+.nav-cta:hover{background:var(--verde);transform:translateY(-1px);}
+
+/* HERO PROGRAMA */
+.prog-hero{
+  padding:70px 0 60px;
+  background:var(--crema);
+  border-bottom:1px solid var(--linea);
+}
+.back-link{display:inline-flex;align-items:center;gap:8px;font-size:0.88rem;font-weight:600;color:var(--verde);opacity:0.7;margin-bottom:28px;transition:opacity .2s;}
+.back-link:hover{opacity:1;}
+.prog-hero-grid{display:grid;grid-template-columns:1.2fr 0.8fr;gap:60px;align-items:center;}
+.eyebrow{display:inline-flex;align-items:center;gap:8px;background:rgba(27,77,62,0.08);color:var(--verde);padding:7px 16px;border-radius:999px;font-size:0.82rem;font-weight:600;letter-spacing:0.03em;text-transform:uppercase;margin-bottom:20px;}
+.eyebrow i{color:var(--amarillo);}
+.prog-hero h1{font-size:2.6rem;font-weight:700;line-height:1.1;color:var(--verde);margin-bottom:18px;}
+.prog-hero h1 span{color:var(--azul);}
+.prog-hero p.lead{font-size:1.05rem;color:rgba(22,36,31,0.72);max-width:480px;margin-bottom:28px;}
+.prog-stats{display:flex;gap:28px;flex-wrap:wrap;}
+.prog-stat{display:flex;flex-direction:column;}
+.prog-stat b{font-family:'Space Grotesk',sans-serif;font-size:1.5rem;color:var(--azul);}
+.prog-stat span{font-size:0.82rem;color:rgba(22,36,31,0.55);}
+
+/* Visual card hero */
+.prog-visual-card{
+  background:#fff;border-radius:22px;padding:28px;
+  border:1px solid var(--linea);
+  box-shadow:0 20px 44px rgba(27,77,62,0.12);
+}
+.prog-visual-card .label-top{font-size:0.75rem;font-weight:700;letter-spacing:0.06em;text-transform:uppercase;color:rgba(22,36,31,0.45);margin-bottom:16px;}
+.prog-visual-card h3{font-size:1rem;color:var(--verde);margin-bottom:18px;}
+.track-row{display:flex;align-items:center;gap:12px;margin-bottom:14px;}
+.track-row .t-label{width:110px;font-size:0.83rem;font-weight:600;color:var(--tinta);}
+.track-row .t-bar{flex:1;height:9px;background:rgba(27,77,62,0.08);border-radius:6px;overflow:hidden;}
+.track-row .t-fill{height:100%;border-radius:6px;}
+.fill-verde{background:var(--verde-claro);}
+.fill-azul{background:var(--azul);}
+.fill-amarillo{background:var(--amarillo);}
+.track-row .t-pct{width:36px;text-align:right;font-size:0.8rem;font-weight:700;color:rgba(22,36,31,0.55);}
+.card-note{margin-top:16px;padding-top:14px;border-top:1px dashed var(--linea);font-size:0.8rem;color:rgba(22,36,31,0.55);display:flex;align-items:center;gap:7px;}
+.card-note i{color:var(--amarillo);}
+
+/* MODULOS */
+.modulos{padding:80px 0;}
+.section-head{text-align:center;max-width:580px;margin:0 auto 50px;}
+.section-head h2{font-size:2rem;color:var(--verde);margin-bottom:12px;font-weight:700;}
+.section-head p{color:rgba(22,36,31,0.65);font-size:1rem;}
+.modulos-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;}
+.mod-card{background:#fff;border-radius:20px;padding:28px;border:1px solid var(--linea);position:relative;transition:transform .2s,box-shadow .2s;}
+.mod-card:hover{transform:translateY(-5px);box-shadow:0 18px 36px rgba(27,77,62,0.10);}
+.mod-num{font-family:'Space Grotesk',sans-serif;font-size:0.75rem;font-weight:700;letter-spacing:0.06em;text-transform:uppercase;color:rgba(22,36,31,0.35);margin-bottom:12px;}
+.mod-icon{width:46px;height:46px;border-radius:14px;display:flex;align-items:center;justify-content:center;font-size:1.2rem;margin-bottom:16px;color:#fff;background:var(--verde);}
+.mod-card.m2 .mod-icon{background:var(--azul);}
+.mod-card.m3 .mod-icon{background:var(--verde-claro);}
+.mod-card.m4 .mod-icon{background:var(--amarillo);color:var(--tinta);}
+.mod-card.m5 .mod-icon{background:var(--azul);}
+.mod-card.m6 .mod-icon{background:var(--verde);}
+.mod-card h3{font-size:1.05rem;color:var(--verde);margin-bottom:8px;font-weight:700;}
+.mod-card p{font-size:0.88rem;color:rgba(22,36,31,0.65);line-height:1.5;}
+.mod-tag{display:inline-block;margin-top:14px;font-size:0.75rem;font-weight:700;padding:4px 12px;border-radius:999px;background:rgba(27,77,62,0.07);color:var(--verde);}
+.mod-card.m4 .mod-tag,.mod-card.m5 .mod-tag,.mod-card.m6 .mod-tag{background:rgba(30,58,95,0.07);color:var(--azul);}
+
+/* QUE INCLUYE */
+.incluye{padding:70px 0;background:var(--verde);color:#fff;}
+.incluye-grid{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center;}
+.incluye h2{font-size:1.9rem;margin-bottom:16px;font-weight:700;}
+.incluye p{color:rgba(255,255,255,0.75);font-size:0.97rem;margin-bottom:28px;}
+.incluye-list{display:flex;flex-direction:column;gap:14px;}
+.inc-item{display:flex;align-items:flex-start;gap:14px;}
+.inc-icon{width:36px;height:36px;border-radius:10px;background:rgba(244,196,48,0.15);color:var(--amarillo);display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:0.95rem;}
+.inc-item h4{font-size:0.95rem;font-weight:600;margin-bottom:3px;}
+.inc-item p{color:rgba(255,255,255,0.65);font-size:0.85rem;margin:0;}
+.incluye-nums{display:flex;flex-direction:column;gap:20px;}
+.inc-num-card{background:rgba(255,255,255,0.07);border:1px solid rgba(255,255,255,0.12);border-radius:18px;padding:24px 28px;}
+.inc-num-card b{font-family:'Space Grotesk',sans-serif;font-size:2.4rem;color:var(--amarillo);display:block;margin-bottom:4px;}
+.inc-num-card span{font-size:0.88rem;color:rgba(255,255,255,0.7);}
+
+/* CTA */
+.cta-banda{padding:70px 0;text-align:center;}
+.cta-banda h2{font-size:2rem;color:var(--verde);margin-bottom:14px;font-weight:700;}
+.cta-banda p{color:rgba(22,36,31,0.65);font-size:1rem;margin-bottom:30px;}
+.btn-primary{background:var(--azul);color:#fff;padding:15px 32px;border-radius:999px;font-weight:600;font-size:1rem;border:none;cursor:pointer;display:inline-flex;align-items:center;gap:10px;transition:transform .15s,box-shadow .2s;box-shadow:0 10px 24px rgba(30,58,95,0.22);}
+.btn-primary:hover{transform:translateY(-2px);box-shadow:0 14px 28px rgba(30,58,95,0.28);}
+
+/* FOOTER */
+footer{background:var(--tinta);color:rgba(255,255,255,0.7);padding:40px 0 24px;}
+.foot-grid{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:20px;margin-bottom:24px;}
+.foot-brand{display:flex;align-items:center;gap:10px;font-family:'Space Grotesk',sans-serif;font-weight:700;color:#fff;font-size:1.1rem;}
+.foot-brand .dot{width:9px;height:9px;border-radius:50%;background:var(--amarillo);}
+.foot-bottom{border-top:1px solid rgba(255,255,255,0.1);padding-top:18px;font-size:0.8rem;text-align:center;color:rgba(255,255,255,0.4);}
+
+@media(max-width:880px){
+  .prog-hero-grid{grid-template-columns:1fr;}
+  .prog-hero h1{font-size:2rem;}
+  .modulos-grid{grid-template-columns:1fr 1fr;}
+  .incluye-grid{grid-template-columns:1fr;}
+}
+@media(max-width:560px){
+  .modulos-grid{grid-template-columns:1fr;}
+}
+</style>
 </head>
 <body>
 
 <header>
   <div class="nav">
-    <div class="brand" onclick="location.href='index.html'" style="cursor:pointer"><span class="dot"></span>Gimnasio Mental</div>
+    <div class="brand"><span class="dot"></span>Gimnasio Mental</div>
     <nav class="nav-links">
       <a href="index.html#programas">Programas</a>
-      <a href="#modulos">Temario</a>
-      <a href="#metodologia">Metodología</a>
-      <a href="#habilidades">Habilidades</a>
-      <a href="#agendar">Contacto</a>
+      <a href="index.html#beneficios">Beneficios</a>
+      <a href="index.html#testimonios">Testimonios</a>
+      <a href="index.html#agendar">Contacto</a>
     </nav>
-    <button class="nav-cta" onclick="document.getElementById('agendar').scrollIntoView({behavior:'smooth'})">Evaluación gratuita</button>
+    <button class="nav-cta" onclick="document.location='index.html#agendar'">Evaluación gratuita</button>
   </div>
 </header>
 
-<section class="hero hero-program">
-  <div class="wrap hero-grid">
-    <div>
-      <a href="index.html#programas" class="back-link"><i class="fas fa-arrow-left"></i> Volver a programas</a>
-      <div class="eyebrow"><i class="fas fa-square-root-variable"></i> Programa especializado · 7–12 años</div>
-      <h1>Lógica Matemática:<br>la rutina que entrena<br><span class="accent">tu razonamiento</span>.</h1>
-      <p class="lead">Seis módulos progresivos donde tu hijo pasará de observar patrones a construir argumentos sólidos, usando problemas, acertijos y diagramas como pesas de su entrenamiento mental.</p>
-      <div class="hero-ctas">
-        <button class="btn-primary" onclick="document.getElementById('agendar').scrollIntoView({behavior:'smooth'})">
-          <i class="fas fa-calendar-check"></i> Agendar evaluación gratuita
-        </button>
-        <button class="btn-secondary" onclick="document.getElementById('modulos').scrollIntoView({behavior:'smooth'})">Ver temario</button>
+<section class="prog-hero">
+  <div class="wrap">
+    <a href="index.html" class="back-link"><i class="fas fa-arrow-left"></i> Volver a programas</a>
+    <div class="prog-hero-grid">
+      <div>
+        <div class="eyebrow"><i class="fas fa-square-root-variable"></i> Programa especializado · 7–12 años</div>
+        <h1>Lógica Matemática:<br><span>la rutina que entrena</span><br>tu razonamiento.</h1>
+        <p class="lead">Seis módulos progresivos donde tu hijo pasará de observar patrones a construir argumentos sólidos, usando problemas, acertijos y diagramas como pesas de su entrenamiento mental.</p>
+        <div class="prog-stats">
+          <div class="prog-stat"><b>6</b><span>módulos progresivos</span></div>
+          <div class="prog-stat"><b>2</b><span>sesiones por semana</span></div>
+          <div class="prog-stat"><b>+1,200</b><span>niños entrenados</span></div>
+        </div>
       </div>
-      <div class="hero-stats">
-        <div class="stat"><b>6</b><span>módulos progresivos</span></div>
-        <div class="stat"><b>2</b><span>sesiones por semana</span></div>
-        <div class="stat"><b>+1,200</b><span>niños entrenados</span></div>
-      </div>
-    </div>
-    <div class="hero-visual">
-      <div class="rep-bar">
-        <div class="rep-bar-head"><span>Rutina actual</span><b>Módulo 3 de 6</b></div>
-        <div class="set"><div class="label">Patrones numéricos</div><div class="track"><div class="fill" style="width:100%"></div></div><div class="pct">100%</div></div>
-        <div class="set"><div class="label">Patrones visuales</div><div class="track"><div class="fill" style="width:100%"></div></div><div class="pct">100%</div></div>
-        <div class="set"><div class="label">Razonamiento deductivo</div><div class="track"><div class="fill" style="width:45%"></div></div><div class="pct">45%</div></div>
-        <div class="rep-bar-foot"><i class="fas fa-bolt"></i> 2 series más para subir al Módulo 4</div>
+      <div>
+        <div class="prog-visual-card">
+          <div class="label-top">Rutina actual</div>
+          <h3>Módulo 3 de 6</h3>
+          <div class="track-row">
+            <div class="t-label">Patrones numéricos</div>
+            <div class="t-bar"><div class="t-fill fill-verde" style="width:100%"></div></div>
+            <div class="t-pct">100%</div>
+          </div>
+          <div class="track-row">
+            <div class="t-label">Patrones visuales</div>
+            <div class="t-bar"><div class="t-fill fill-azul" style="width:100%"></div></div>
+            <div class="t-pct">100%</div>
+          </div>
+          <div class="track-row">
+            <div class="t-label">Razonamiento deductivo</div>
+            <div class="t-bar"><div class="t-fill fill-amarillo" style="width:45%"></div></div>
+            <div class="t-pct">45%</div>
+          </div>
+          <div class="card-note"><i class="fas fa-bolt"></i> 2 series más para subir al Módulo 4</div>
+        </div>
       </div>
     </div>
   </div>
 </section>
 
-<section class="programas modulos" id="modulos">
+<section class="modulos">
   <div class="wrap">
     <div class="section-head">
-      <div class="eyebrow"><i class="fas fa-list-ol"></i> Temario completo</div>
-      <h2>Seis módulos, una rutina progresiva</h2>
-      <p>Cada módulo se construye sobre el anterior: de la observación al pensamiento crítico. Como en el gimnasio, la intensidad sube conforme tu hijo gana resistencia mental.</p>
+      <h2>Los 6 módulos del programa</h2>
+      <p>Cada módulo construye sobre el anterior, como aumentar el peso en cada sesión de gimnasio.</p>
     </div>
-
     <div class="modulos-grid">
-
-      <div class="modulo-card">
-        <div class="modulo-head">
-          <span class="modulo-num">Módulo 1</span>
-          <span class="modulo-badge intro">Base</span>
-        </div>
-        <div class="modulo-icon"><i class="fas fa-lightbulb"></i></div>
-        <h3>Introducción al Pensamiento Lógico</h3>
-        <p>El calentamiento: entender qué es la lógica, cómo observar con intención y por qué matemáticas y lógica entrenan el mismo músculo.</p>
-        <ul class="modulo-list">
-          <li><i class="fas fa-check"></i> ¿Qué es la lógica?</li>
-          <li><i class="fas fa-check"></i> Observación y análisis de situaciones</li>
-          <li><i class="fas fa-check"></i> Relación entre lógica y matemáticas</li>
-        </ul>
+      <div class="mod-card m1">
+        <div class="mod-num">Módulo 01</div>
+        <div class="mod-icon"><i class="fas fa-eye"></i></div>
+        <h3>Observación de patrones</h3>
+        <p>Identificar secuencias numéricas y visuales. El punto de partida para todo razonamiento lógico.</p>
+        <span class="mod-tag">Introductorio</span>
       </div>
-
-      <div class="modulo-card">
-        <div class="modulo-head">
-          <span class="modulo-num">Módulo 2</span>
-          <span class="modulo-badge core">Central</span>
-        </div>
-        <div class="modulo-icon"><i class="fas fa-shapes"></i></div>
-        <h3>Patrones y Secuencias</h3>
-        <p>La primera serie de peso: detectar regularidades en números, formas y situaciones, y aprender a predecir lo que viene después.</p>
-        <ul class="modulo-list">
-          <li><i class="fas fa-check"></i> Identificación de patrones numéricos</li>
-          <li><i class="fas fa-check"></i> Patrones visuales y geométricos</li>
-          <li><i class="fas fa-check"></i> Predicción de secuencias</li>
-        </ul>
+      <div class="mod-card m2">
+        <div class="mod-num">Módulo 02</div>
+        <div class="mod-icon"><i class="fas fa-link"></i></div>
+        <h3>Relaciones y comparaciones</h3>
+        <p>Encontrar lo que tienen en común conjuntos de números, figuras y situaciones cotidianas.</p>
+        <span class="mod-tag">Base</span>
       </div>
-
-      <div class="modulo-card">
-        <div class="modulo-head">
-          <span class="modulo-num">Módulo 3</span>
-          <span class="modulo-badge core">Central</span>
-        </div>
-        <div class="modulo-icon"><i class="fas fa-magnifying-glass"></i></div>
-        <h3>Razonamiento Deductivo</h3>
-        <p>Aquí se construye fuerza mental: partir de premisas verdaderas para llegar a conclusiones válidas, usando acertijos como mancuernas.</p>
-        <ul class="modulo-list">
-          <li><i class="fas fa-check"></i> Inferencias lógicas</li>
-          <li><i class="fas fa-check"></i> Resolución de acertijos</li>
-          <li><i class="fas fa-check"></i> Análisis de premisas y conclusiones</li>
-        </ul>
+      <div class="mod-card m3">
+        <div class="mod-num">Módulo 03</div>
+        <div class="mod-icon"><i class="fas fa-magnifying-glass"></i></div>
+        <h3>Razonamiento deductivo</h3>
+        <p>Llegar a conclusiones correctas a partir de pistas dadas. Lógica de detective aplicada a matemáticas.</p>
+        <span class="mod-tag">Intermedio</span>
       </div>
-
-      <div class="modulo-card">
-        <div class="modulo-head">
-          <span class="modulo-num">Módulo 4</span>
-          <span class="modulo-badge core">Central</span>
-        </div>
-        <div class="modulo-icon"><i class="fas fa-arrows-to-dot"></i></div>
-        <h3>Razonamiento Inductivo</h3>
-        <p>El complemento perfecto: pasar de casos concretos a reglas generales, descubriendo relaciones que no estaban a simple vista.</p>
-        <ul class="modulo-list">
-          <li><i class="fas fa-check"></i> Generalización de reglas</li>
-          <li><i class="fas fa-check"></i> Descubrimiento de relaciones</li>
-          <li><i class="fas fa-check"></i> Resolución de problemas basados en observaciones</li>
-        </ul>
+      <div class="mod-card m4">
+        <div class="mod-num">Módulo 04</div>
+        <div class="mod-icon"><i class="fas fa-puzzle-piece"></i></div>
+        <h3>Resolución de problemas</h3>
+        <p>Estrategias para atacar problemas de varios pasos sin bloquearse en el primer obstáculo.</p>
+        <span class="mod-tag">Intermedio-avanzado</span>
       </div>
-
-      <div class="modulo-card">
-        <div class="modulo-head">
-          <span class="modulo-num">Módulo 5</span>
-          <span class="modulo-badge advanced">Avanzado</span>
-        </div>
-        <div class="modulo-icon"><i class="fas fa-table-cells-large"></i></div>
-        <h3>Estrategias de Resolución de Problemas</h3>
-        <p>Las técnicas del atleta: organizar la información, usar diagramas y tablas, y encontrar caminos eficientes a la solución.</p>
-        <ul class="modulo-list">
-          <li><i class="fas fa-check"></i> Organización de información</li>
-          <li><i class="fas fa-check"></i> Uso de diagramas y tablas</li>
-          <li><i class="fas fa-check"></i> Métodos para encontrar soluciones eficientes</li>
-        </ul>
+      <div class="mod-card m5">
+        <div class="mod-num">Módulo 05</div>
+        <div class="mod-icon"><i class="fas fa-chart-line"></i></div>
+        <h3>Argumentación numérica</h3>
+        <p>Defender y explicar cómo se llegó a una respuesta. Pensamiento que se puede comunicar.</p>
+        <span class="mod-tag">Avanzado</span>
       </div>
-
-      <div class="modulo-card modulo-featured">
-        <div class="modulo-head">
-          <span class="modulo-num">Módulo 6</span>
-          <span class="modulo-badge elite">Cierre</span>
-        </div>
-        <div class="modulo-icon"><i class="fas fa-brain"></i></div>
-        <h3>Pensamiento Crítico Aplicado</h3>
-        <p>La prueba final: evaluar argumentos, tomar decisiones basadas en evidencia y competir en retos reales de lógica.</p>
-        <ul class="modulo-list">
-          <li><i class="fas fa-check"></i> Evaluación de argumentos</li>
-          <li><i class="fas fa-check"></i> Toma de decisiones basada en evidencia</li>
-          <li><i class="fas fa-check"></i> Retos y competencias de lógica</li>
-        </ul>
+      <div class="mod-card m6">
+        <div class="mod-num">Módulo 06</div>
+        <div class="mod-icon"><i class="fas fa-trophy"></i></div>
+        <h3>Retos integradores</h3>
+        <p>Problemas que combinan todo lo aprendido. El equivalente a competir después de meses de entrenamiento.</p>
+        <span class="mod-tag">Élite</span>
       </div>
-
     </div>
   </div>
 </section>
 
-<section class="beneficios metodologia" id="metodologia">
-  <div class="wrap ben-grid">
+<section class="incluye">
+  <div class="wrap incluye-grid">
     <div>
-      <h2>¿Cómo entrenamos la lógica matemática?</h2>
-      <p>No enseñamos fórmulas de memoria. Entrenamos el hábito de pensar bien: cada sesión combina explicación breve, práctica guiada y retos individuales, con intensidad ajustada al nivel del niño.</p>
-    </div>
-    <div class="ben-list">
-      <div class="ben-item">
-        <div class="num">1</div>
-        <div><h4>Series progresivas</h4><p>Cada módulo parte del anterior. Tu hijo no enfrenta un problema difícil sin haber desarrollado primero el músculo necesario.</p></div>
-      </div>
-      <div class="ben-item">
-        <div class="num">2</div>
-        <div><h4>Evaluación constante</h4><p>Cada semana medimos velocidad de razonamiento, precisión y autonomía. Los padres reciben un reporte claro del avance.</p></div>
-      </div>
-      <div class="ben-item">
-        <div class="num">3</div>
-        <div><h4>Acertijos como entrenamiento</h4><p>Los problemas se disfrazan de juegos: así el cerebro aprende sin sentir fatiga y la práctica se vuelve hábito.</p></div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section class="habilidades" id="habilidades">
-  <div class="wrap">
-    <div class="section-head">
-      <div class="eyebrow"><i class="fas fa-trophy"></i> Resultados que se notan</div>
-      <h2>Lo que tu hijo se lleva al terminar</h2>
-      <p>Más que "saber matemáticas", tu hijo desarrollará una forma de pensar que se aplica a cualquier materia y a la vida diaria.</p>
-    </div>
-    <div class="skills-grid">
-      <div class="skill-card">
-        <div class="skill-icon"><i class="fas fa-magnifying-glass-chart"></i></div>
-        <h4>Observación analítica</h4>
-        <p>Dejará de leer problemas a la ligera: detectará datos clave, relaciones ocultas y patrones en cualquier situación.</p>
-      </div>
-      <div class="skill-card">
-        <div class="skill-icon"><i class="fas fa-diagram-next"></i></div>
-        <h4>Pensamiento estructurado</h4>
-        <p>Aprenderá a ordenar ideas antes de responder, evitando bloqueos y respuestas impulsivas.</p>
-      </div>
-      <div class="skill-card">
-        <div class="skill-icon"><i class="fas fa-scale-balanced"></i></div>
-        <h4>Argumentación sólida</h4>
-        <p>No solo dirá "creo que es así", sino "es así porque estas premisas me llevan a esta conclusión".</p>
-      </div>
-      <div class="skill-card">
-        <div class="skill-icon"><i class="fas fa-bolt"></i></div>
-        <h4>Resolución autónoma</h4>
-        <p>Enfrentará problemas nuevos sin esperar la respuesta: tendrá herramientas propias para buscar soluciones.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section class="testimonios" id="testimonios">
-  <div class="wrap">
-    <div class="section-head">
-      <div class="eyebrow"><i class="fas fa-star"></i> Padres de alumnos de Lógica Matemática</div>
-      <h2>Historias reales de progreso</h2>
-    </div>
-    <div class="test-grid">
-      <div class="test-card">
-        <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
-        <p>Mi hijo pasó de evitar las matemáticas a pedirme que le ponga retos extra los fines de semana. El módulo de patrones fue el que lo enganchó.</p>
-        <div class="test-who"><div class="test-avatar">M</div><div><b>Marisol Quintero</b><span>Mamá de Andrés, 9 años</span></div></div>
-      </div>
-      <div class="test-card">
-        <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
-        <p>En el colegio ya lo notan: levanta la mano primero en matemáticas y explica sus respuestas con seguridad. Se nota el entrenamiento.</p>
-        <div class="test-who"><div class="test-avatar">J</div><div><b>Jorge Ramírez</b><span>Papá de Sofía, 10 años</span></div></div>
-      </div>
-      <div class="test-card">
-        <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
-        <p>Lo mejor es que no solo mejoró en matemáticas: ahora también razona mejor cuando discutimos en casa o cuando lee cualquier texto.</p>
-        <div class="test-who"><div class="test-avatar">A</div><div><b>Andrea López</b><span>Mamá de Emiliano, 11 años</span></div></div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section class="agendar" id="agendar">
-  <div class="wrap">
-    <div class="agendar-box">
-      <div class="agendar-info">
-        <h2>Agenda la evaluación diagnóstica gratuita</h2>
-        <p>Una sesión sin costo donde identificamos el nivel de razonamiento lógico de tu hijo y te recomendamos si Lógica Matemática es el programa ideal.</p>
-        <div class="agendar-points">
-          <div><i class="fas fa-check"></i> Sin costo ni compromiso</div>
-          <div><i class="fas fa-check"></i> Reporte de resultados para los padres</div>
-          <div><i class="fas fa-check"></i> Recomendación de módulo de inicio</div>
-          <div><i class="fas fa-check"></i> Duración aproximada: 30 minutos</div>
+      <h2>¿Qué incluye cada sesión?</h2>
+      <p>Cada clase de 50 minutos sigue una estructura probada para maximizar el progreso sin perder la motivación.</p>
+      <div class="incluye-list">
+        <div class="inc-item">
+          <div class="inc-icon"><i class="fas fa-fire-flame-curved"></i></div>
+          <div><h4>Calentamiento (10 min)</h4><p>Acertijos rápidos para activar el razonamiento antes de la sesión principal.</p></div>
+        </div>
+        <div class="inc-item">
+          <div class="inc-icon"><i class="fas fa-dumbbell"></i></div>
+          <div><h4>Entrenamiento principal (30 min)</h4><p>Ejercicios progresivos del módulo actual, con guía del instructor.</p></div>
+        </div>
+        <div class="inc-item">
+          <div class="inc-icon"><i class="fas fa-chart-bar"></i></div>
+          <div><h4>Evaluación de sesión (10 min)</h4><p>Medición de lo aprendido y retroalimentación clara para el niño y los padres.</p></div>
         </div>
       </div>
-      <div class="agendar-form">
-        <h3>Reserva tu cupo</h3>
-        <p class="sub">Te contactaremos en menos de 24 horas para confirmar el horario.</p>
-        <form id="formAgenda" onsubmit="enviarFormulario(event)">
-          <div class="form-row">
-            <div class="field"><label for="nombrePadre">Nombre del padre/madre</label><input type="text" id="nombrePadre" required></div>
-            <div class="field"><label for="nombreHijo">Nombre del niño/a</label><input type="text" id="nombreHijo" required></div>
-          </div>
-          <div class="form-row">
-            <div class="field"><label for="edadHijo">Edad del niño/a</label><input type="number" id="edadHijo" min="7" max="12" required></div>
-            <div class="field"><label for="programaInteres">Programa</label>
-              <select id="programaInteres">
-                <option value="logica" selected>Lógica Matemática</option>
-                <option value="lectura">Comprensión Lectora</option>
-                <option value="algoritmos">Algoritmos Básicos</option>
-                <option value="no-seguro">No estoy seguro/a</option>
-              </select>
-            </div>
-          </div>
-          <div class="form-row">
-            <div class="field full"><label for="emailPadre">Correo electrónico</label><input type="email" id="emailPadre" required></div>
-          </div>
-          <div class="form-row">
-            <div class="field full"><label for="telPadre">Teléfono / WhatsApp</label><input type="tel" id="telPadre" required></div>
-          </div>
-          <button type="submit" class="submit-btn"><i class="fas fa-paper-plane"></i> Solicitar evaluación gratuita</button>
-          <p class="form-note">Al enviar este formulario, aceptas que te contactemos para coordinar la sesión.</p>
-        </form>
-      </div>
     </div>
+    <div class="incluye-nums">
+      <div class="inc-num-card"><b>50 min</b><span>Duración por sesión</span></div>
+      <div class="inc-num-card"><b>2×/sem</b><span>Frecuencia recomendada</span></div>
+      <div class="inc-num-card"><b>8 sem</b><span>Para resultados medibles</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="cta-banda">
+  <div class="wrap">
+    <h2>¿Listo para empezar el entrenamiento?</h2>
+    <p>Agenda una evaluación diagnóstica gratuita y sabemos exactamente en qué módulo debe comenzar tu hijo.</p>
+    <button class="btn-primary" onclick="document.location='index.html#agendar'">
+      <i class="fas fa-calendar-check"></i> Agendar evaluación gratuita
+    </button>
   </div>
 </section>
 
@@ -290,59 +283,10 @@
   <div class="wrap">
     <div class="foot-grid">
       <div class="foot-brand"><span class="dot"></span>Gimnasio Mental</div>
-      <div class="foot-links">
-        <a href="index.html#programas">Programas</a>
-        <a href="index.html#beneficios">Beneficios</a>
-        <a href="index.html#testimonios">Testimonios</a>
-        <a href="#agendar">Agendar evaluación</a>
-      </div>
-      <div class="foot-social">
-        <a href="#"><i class="fab fa-instagram"></i></a>
-        <a href="#"><i class="fab fa-whatsapp"></i></a>
-        <a href="#"><i class="fab fa-facebook-f"></i></a>
-      </div>
     </div>
     <div class="foot-bottom">© 2026 Gimnasio Mental — Entrenamiento de pensamiento analítico para niños.</div>
   </div>
 </footer>
-
-<script>
-function escapeXSS(str){ if(!str) return ''; return str.replace(/[&<>]/g, m => m === '&' ? '&amp;' : m === '<' ? '&lt;' : '&gt;'); }
-
-class NotificationSystem {
-  constructor(){ this.createContainer(); }
-  createContainer(){ if(!document.querySelector('.notification-container')){ const c=document.createElement('div'); c.className='notification-container'; document.body.appendChild(c); } }
-  showToast(message, type='info', duration=3500){
-    const container = document.querySelector('.notification-container');
-    const toast = document.createElement('div');
-    const icons = { success:'fa-check-circle', error:'fa-exclamation-circle', warning:'fa-exclamation-triangle', info:'fa-info-circle' };
-    const titles = { success:'Listo', error:'Error', warning:'Atención', info:'Información' };
-    toast.className = `notification notification-${type}`;
-    toast.innerHTML = `<div class="notification-icon"><i class="fas ${icons[type]}"></i></div>
-      <div class="notification-content"><div class="notification-title">${titles[type]}</div><div class="notification-message">${escapeXSS(message)}</div></div>
-      <button class="notification-close"><i class="fas fa-times"></i></button>`;
-    container.appendChild(toast);
-    setTimeout(()=> toast.remove(), duration);
-    toast.querySelector('.notification-close').onclick = () => toast.remove();
-  }
-}
-const notifier = new NotificationSystem();
-
-function enviarFormulario(e){
-  e.preventDefault();
-  const nombrePadre = document.getElementById('nombrePadre').value.trim();
-  const nombreHijo = document.getElementById('nombreHijo').value.trim();
-  const edadHijo = document.getElementById('edadHijo').value;
-
-  if(!nombrePadre || !nombreHijo || !edadHijo || !document.getElementById('emailPadre').value.trim() || !document.getElementById('telPadre').value.trim()){
-    notifier.showToast('Completa todos los campos para continuar', 'warning');
-    return;
-  }
-
-  notifier.showToast(`¡Gracias ${nombrePadre}! Te contactaremos pronto para agendar la evaluación de ${nombreHijo}.`, 'success');
-  document.getElementById('formAgenda').reset();
-}
-</script>
 
 </body>
 </html>

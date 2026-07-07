@@ -69,7 +69,7 @@ async function verificarDisponibilidad() {
     horaSelect.innerHTML = "<option value=''>Cargando horarios...</option>";
 
     try {
-        const { data, error } = await supabase
+        const { data, error } = await supabaseClient
             .from("citas")
             .select("hora")
             .eq("fecha", fecha);
@@ -163,7 +163,7 @@ formulario.addEventListener("submit", async function(e){
 
     try {
         // Verificar nuevamente el límite de citas
-        const { data: citas, error: errorConsulta } = await supabase
+        const { data: citas, error: errorConsulta } = await supabaseClient
             .from("citas")
             .select("id")
             .eq("fecha", fecha);
@@ -182,7 +182,7 @@ formulario.addEventListener("submit", async function(e){
         }
 
         // Guardar
-        const { error } = await supabase
+        const { error } = await supabaseClient
             .from("citas")
             .insert([{
                 acudiente,

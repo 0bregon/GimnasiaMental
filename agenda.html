@@ -5,62 +5,167 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Agendar Evaluación</title>
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
-
     <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 </head>
 
 <body>
 
-    <h1>Agenda una Evaluación Gratuita</h1>
+    <!-- HEADER -->
+    <header>
+        <div class="nav">
+            <div class="brand">
+                <span class="dot"></span>
+                Gimnasio Mental
+            </div>
+            <nav class="nav-links">
+                <a href="index.html">Inicio</a>
+                <a href="index.html#programas">Programas</a>
+                <a href="index.html#beneficios">Beneficios</a>
+                <a href="index.html#testimonios">Testimonios</a>
+            </nav>
+            <a href="agenda.html" class="nav-cta">Agendar</a>
+            <button class="menu-toggle" aria-label="Menú"><i class="fa-solid fa-bars"></i></button>
+        </div>
+    </header>
 
-    <form id="formAgenda">
+    <!-- SECCIÓN AGENDAR -->
+    <section class="agendar">
+        <div class="wrap">
+            <div class="agendar-box">
 
-        <label>Nombre del Acudiente</label>
-        <input type="text" id="acudiente" required>
+                <!-- Lado izquierdo: Info -->
+                <div class="agendar-info">
+                    <h2>Agenda tu Evaluación Gratuita</h2>
+                    <p>Descubre el nivel de tu hijo y recibe recomendaciones personalizadas sin costo.</p>
+                    <div class="agendar-points">
+                        <div><i class="fa-solid fa-circle-check"></i> Evaluación 100% gratuita</div>
+                        <div><i class="fa-solid fa-circle-check"></i> Resultados el mismo día</div>
+                        <div><i class="fa-solid fa-circle-check"></i> Asesoría personalizada</div>
+                        <div><i class="fa-solid fa-circle-check"></i> Sin compromiso</div>
+                    </div>
+                </div>
 
-        <label>Nombre del Niño</label>
-        <input type="text" id="estudiante" required>
+                <!-- Lado derecho: Formulario -->
+                <div class="agendar-form">
+                    <h3>Reserva tu cupo</h3>
+                    <p class="sub">Completa el formulario y te contactaremos para confirmar.</p>
 
-        <label>Edad</label>
-        <input type="number" id="edad" min="4" max="18" required>
+                    <form id="formAgenda">
 
-        <label>Teléfono</label>
-        <input type="tel" id="telefono" required>
+                        <div class="form-row">
+                            <div class="field">
+                                <label for="acudiente">Nombre del Acudiente</label>
+                                <input type="text" id="acudiente" name="acudiente" required>
+                            </div>
+                            <div class="field">
+                                <label for="estudiante">Nombre del Niño</label>
+                                <input type="text" id="estudiante" name="estudiante" required>
+                            </div>
+                        </div>
 
-        <label>Correo</label>
-        <input type="email" id="correo" required>
+                        <div class="form-row">
+                            <div class="field">
+                                <label for="edad">Edad</label>
+                                <input type="number" id="edad" name="edad" min="4" max="18" required>
+                            </div>
+                            <div class="field">
+                                <label for="telefono">Teléfono</label>
+                                <input type="tel" id="telefono" name="telefono" required>
+                            </div>
+                        </div>
 
-        <label>Programa</label>
+                        <div class="form-row">
+                            <div class="field">
+                                <label for="correo">Correo</label>
+                                <input type="email" id="correo" name="correo" required>
+                            </div>
+                            <div class="field">
+                                <label for="programa">Programa</label>
+                                <select id="programa" name="programa" required>
+                                    <option value="">Seleccione</option>
+                                    <option value="logica_matematica">Lógica Matemática</option>
+                                    <option value="comprension_lectora">Comprensión Lectora</option>
+                                    <option value="algoritmos_basicos">Algoritmos Básicos</option>
+                                </select>
+                            </div>
+                        </div>
 
-        <select id="programa" required>
-            <option value="">Seleccione</option>
-            <option>Lógica Matemática</option>
-            <option>Comprensión Lectora</option>
-            <option>Algoritmos Básicos</option>
-        </select>
+                        <div class="form-row">
+                            <div class="field">
+                                <label for="fecha">Fecha</label>
+                                <input type="date" id="fecha" name="fecha" required>
+                            </div>
+                            <div class="field">
+                                <label for="hora">Horario</label>
+                                <select id="hora" name="hora" required>
+                                    <option value="">Seleccione horario</option>
+                                </select>
+                            </div>
+                        </div>
 
-        <label>Fecha</label>
-        <input type="date" id="fecha" required>
+                        <div class="form-row">
+                            <div class="field full">
+                                <label for="observaciones">Observaciones (opcional)</label>
+                                <textarea id="observaciones" name="observaciones" rows="3"></textarea>
+                            </div>
+                        </div>
 
-        <label>Horario</label>
+                        <button type="submit" class="submit-btn">
+                            <i class="fa-solid fa-calendar-check"></i>
+                            Agendar Evaluación
+                        </button>
 
-        <select id="hora" required>
+                        <p class="form-note">Tus datos están seguros. No compartimos tu información.</p>
 
-        </select>
+                    </form>
 
-        <label>Observaciones</label>
+                    <div id="mensaje"></div>
+                </div>
 
-        <textarea id="observaciones"></textarea>
+            </div>
+        </div>
+    </section>
 
-        <button type="submit">
-            Agendar Evaluación
-        </button>
+    <!-- FOOTER -->
+    <footer>
+    <div class="wrap">
+        <div class="foot-grid">
+        <div class="foot-brand"><span class="dot"></span>Gimnasio Mental</div>
+        <div class="foot-links">
+            <a href="#programas">Programas</a>
+            <a href="#beneficios">Beneficios</a>
+            <a href="#testimonios">Testimonios</a>
+            <a href="#agendar">Agendar evaluación</a>
+        </div>
+        <div class="foot-social">
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-whatsapp"></i></a>
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+        </div>
+        <div class="foot-contacto">
 
-    </form>
+    <p><i class="fas fa-map-marker-alt"></i>La Chorrera, Panamá Oeste</p>
 
-    <div id="mensaje"></div>
+    <p><i class="fas fa-phone"></i>+507 6000-0000</p>
+
+    <p><i class="fas fa-envelope"></i> info@gimnasiomental.com</p>
+    <p><i class="fas fa-clock"></i> Lunes a Viernes 8:00 a.m. - 5:00 p.m.</p>
+    </div>
+        </div>
+        <div class="foot-bottom">© 2026 Gimnasio Mental — Entrenamiento de pensamiento analítico para niños.</div>
+    </div>
+    </footer>
+
+    <!-- Bloquear fechas pasadas -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const hoy = new Date().toISOString().split('T')[0];
+            document.getElementById('fecha').setAttribute('min', hoy);
+        });
+    </script>
 
     <script src="js/supabase.js"></script>
     <script src="js/agenda.js"></script>

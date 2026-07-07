@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agendar Evaluación</title>
+
+    <link rel="stylesheet" href="styles.css">
+
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+</head>
+
+<body>
+
+    <h1>Agenda una Evaluación Gratuita</h1>
+
+    <form id="formAgenda">
+
+        <label>Nombre del Acudiente</label>
+        <input type="text" id="acudiente" required>
+
+        <label>Nombre del Niño</label>
+        <input type="text" id="estudiante" required>
+
+        <label>Edad</label>
+        <input type="number" id="edad" min="4" max="18" required>
+
+        <label>Teléfono</label>
+        <input type="tel" id="telefono" required>
+
+        <label>Correo</label>
+        <input type="email" id="correo" required>
+
+        <label>Programa</label>
+
+        <select id="programa" required>
+            <option value="">Seleccione</option>
+            <option>Lógica Matemática</option>
+            <option>Comprensión Lectora</option>
+            <option>Algoritmos Básicos</option>
+        </select>
+
+        <label>Fecha</label>
+        <input type="date" id="fecha" required>
+
+        <label>Horario</label>
+
+        <select id="hora" required>
+
+        </select>
+
+        <label>Observaciones</label>
+
+        <textarea id="observaciones"></textarea>
+
+        <button type="submit">
+            Agendar Evaluación
+        </button>
+
+    </form>
+
+    <div id="mensaje"></div>
+
+    <script src="js/supabase.js"></script>
+    <script src="js/agenda.js"></script>
+
+</body>
+
+</html>

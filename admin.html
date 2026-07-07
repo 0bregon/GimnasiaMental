@@ -16,35 +16,98 @@
 
 <body>
 
-<h1>Panel Administrativo</h1>
+<header class="admin-header">
 
-<label>Buscar por fecha</label>
+    <h1>Panel Administrativo</h1>
+
+    <p>Centro de Tutorías Gimnasio Mental</p>
+
+</header>
+
+<section class="dashboard">
+
+<div class="dashboard-cards">
+
+<div class="dash-card">
+
+<h2 id="totalCitas">0</h2>
+
+<p>Citas Registradas</p>
+
+</div>
+
+<div class="dash-card">
+
+<h2 id="citasHoy">0</h2>
+
+<p>Citas Hoy</p>
+
+</div>
+
+<div class="dash-card">
+
+<h2 id="cuposDisponibles">10</h2>
+
+<p>Cupos Restantes</p>
+
+</div>
+
+</div>
+
+</section>
+
+<section class="filtros">
 
 <input type="date" id="buscarFecha">
 
+<select id="filtrarPrograma">
+
+<option value="">Todos los programas</option>
+
+<option value="Lógica Matemática">Lógica Matemática</option>
+
+<option value="Comprensión Lectora">Comprensión Lectora</option>
+
+<option value="Algoritmos Básicos">Algoritmos Básicos</option>
+
+</select>
+
 <button id="btnBuscar">
+
 Buscar
+
 </button>
 
 <button id="btnTodas">
-Mostrar todas
+
+Mostrar Todo
+
 </button>
 
-<hr>
+</section>
 
-<table border="1" width="100%" id="tabla">
+<section class="tabla">
+
+<table>
 
 <thead>
 
 <tr>
 
 <th>Acudiente</th>
-<th>Estudiante</th>
+
+<th>Niño</th>
+
 <th>Programa</th>
+
 <th>Fecha</th>
+
 <th>Hora</th>
+
 <th>Teléfono</th>
+
 <th>Correo</th>
+
 <th>Eliminar</th>
 
 </tr>
@@ -57,7 +120,12 @@ Mostrar todas
 
 </table>
 
+</section>
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+
 <script src="js/supabase.js"></script>
+
 <script src="js/admin.js"></script>
 
 </body>

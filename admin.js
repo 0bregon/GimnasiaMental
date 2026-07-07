@@ -37,6 +37,15 @@ async function cargarCitas(){
 
 }
 
+document.getElementById("totalCitas").textContent = data.length;
+
+const hoy = new Date().toISOString().split("T")[0];
+
+const citasHoy = data.filter(c => c.fecha === hoy);
+
+document.getElementById("citasHoy").textContent = citasHoy.length;
+
+document.getElementById("cuposDisponibles").textContent = 10 - citasHoy.length;
 
 
 //==============================

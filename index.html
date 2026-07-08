@@ -11,19 +11,24 @@
 <body>
 
 <header>
-  <div class="nav">
-    <div class="brand"><span class="dot"></span>Gimnasio Mental</div>
-    <nav class="nav-links">
-      <a href="#programas">Programas</a>
-      <a href="#beneficios">Beneficios</a>
-      <a href="#testimonios">Testimonios</a>
-      <a href="#agendar">Contacto</a>
-    </nav>
-    <a href="agenda.html" class="btn-primary">
-    <i class="fas fa-calendar-check"></i>
-    Agendar evaluación gratuita
-    </a>
-  </div>
+    <div class="nav">
+        <a href="index.html" class="brand">
+            <img src="logo.png" alt="Gimnasio Mental" class="logo-img">
+        </a>
+
+        <nav class="nav-links" id="navLinks">
+            <a href="index.html">Inicio</a>
+            <a href="index.html#programas">Programas</a>
+            <a href="index.html#beneficios">Beneficios</a>
+            <a href="index.html#testimonios">Testimonios</a>
+        </nav>
+
+        <a href="agenda.html" class="nav-cta">Agendar</a>
+
+        <button class="menu-toggle" id="menuToggle" aria-label="Menú">
+            <i class="fa-solid fa-bars"></i>
+        </button>
+    </div>
 </header>
 
 <section class="hero">
@@ -42,15 +47,6 @@
           ¿Por qué elegirnos?
       </a>
       
-    </div>
-    <div class="hero-visual">
-      <div class="rep-bar">
-        <div class="rep-bar-head"><span>Progreso semanal</span><b>Serie 4 de 6</b></div>
-        <div class="set"><div class="label">Lógica matemática</div><div class="track"><div class="fill"></div></div><div class="pct">88%</div></div>
-        <div class="set"><div class="label">Comprensión lectora</div><div class="track"><div class="fill"></div></div><div class="pct">64%</div></div>
-        <div class="set"><div class="label">Algoritmos básicos</div><div class="track"><div class="fill"></div></div><div class="pct">97%</div></div>
-        <div class="rep-bar-foot"><i class="fas fa-bolt"></i> 3 repeticiones más para subir de nivel</div>
-      </div>
     </div>
   </div>
 </section>
@@ -269,3 +265,7 @@ async function enviarFormulario(e){
   document.getElementById('formAgenda').reset();
 }
 </script>
+
+<script src="menu.js"></script>
+</body>
+</html>
